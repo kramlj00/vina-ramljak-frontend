@@ -1,0 +1,13 @@
+{
+    "navigation": {
+        "home": "Home",
+        "wines": "Wines",
+        "gallery": "Gallery",
+        "blog": "Blog",
+        "about": "About",
+        "contact": "Contact"
+    },
+    "common": {
+        "toggleLanguage": "Toggle language"
+    }
+}

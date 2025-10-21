@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 interface IProps {
   cartItemsCount?: number;
@@ -14,40 +15,20 @@ interface IProps {
 const Navigation = ({ cartItemsCount = 0 }: IProps) => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
-  const [language, setLanguage] = useState<"hr" | "en">("hr");
-
-  const translations = {
-    hr: {
-      home: "Početna",
-      wines: "Vina",
-      gallery: "Galerija",
-      blog: "Blog",
-      about: "O Nama",
-      contact: "Kontakt",
-    },
-    en: {
-      home: "Home",
-      wines: "Wines",
-      gallery: "Gallery",
-      blog: "Blog",
-      about: "About",
-      contact: "Contact",
-    },
-  };
-
-  const t = translations[language];
+  const { t, i18n } = useTranslation();
 
   const navLinks = [
-    { path: "/", label: t.home },
-    { path: "/wines", label: t.wines },
-    { path: "/gallery", label: t.gallery },
-    { path: "/blog", label: t.blog },
-    { path: "/about", label: t.about },
-    { path: "/contact", label: t.contact },
+    { path: "/", label: t("navigation.home") },
+    { path: "/wines", label: t("navigation.wines") },
+    { path: "/gallery", label: t("navigation.gallery") },
+    { path: "/blog", label: t("navigation.blog") },
+    { path: "/about", label: t("navigation.about") },
+    { path: "/contact", label: t("navigation.contact") },
   ];
 
   const toggleLanguage = () => {
-    setLanguage((prev) => (prev === "hr" ? "en" : "hr"));
+    const newLang = i18n.language === "hr" ? "en" : "hr";
+    i18n.changeLanguage(newLang);
   };
 
   return (
@@ -82,10 +63,10 @@ const Navigation = ({ cartItemsCount = 0 }: IProps) => {
             size="icon"
             onClick={toggleLanguage}
             className="hover:bg-primary/10"
-            aria-label="Toggle language"
+            aria-label={t("common.toggleLanguage")}
           >
             <Globe className="h-5 w-5" />
-            <span className="ml-1 text-xs">{language.toUpperCase()}</span>
+            <span className="ml-1 text-xs">{i18n.language.toUpperCase()}</span>
           </Button>
 
           <Link href="/cart" className="no-underline">

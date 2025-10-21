@@ -1,0 +1,13 @@
+{
+    "navigation": {
+        "home": "Početna",
+        "wines": "Vina",
+        "gallery": "Galerija",
+        "blog": "Blog",
+        "about": "O Nama",
+        "contact": "Kontakt"
+    },
+    "common": {
+        "toggleLanguage": "Promijeni jezik"
+    }
+}
