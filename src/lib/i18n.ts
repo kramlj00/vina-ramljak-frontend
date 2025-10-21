@@ -21,7 +21,6 @@ i18n
   .init({
     resources,
     fallbackLng: "hr", // Default language
-    lng: "hr", // Initial language
     interpolation: {
       escapeValue: false, // React already escapes by default
     },
