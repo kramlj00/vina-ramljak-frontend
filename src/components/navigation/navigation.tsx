@@ -61,20 +61,21 @@ const Navigation = ({ cartItemsCount = 0 }: IProps) => {
         <div className="flex items-center space-x-4">
           <Button
             variant="ghost"
-            size="icon"
             onClick={toggleLanguage}
-            className="hover:bg-primary/10"
+            className="hover:bg-white/10 hover:text-white py-1 px-2"
             aria-label={t("common.toggleLanguage")}
           >
             <Globe className="h-5 w-5" />
-            <span className="ml-1 text-xs">{i18n.language.toUpperCase()}</span>
+            <span className="ml-1 text-xs">
+              {i18n.language.split("-")[0].toUpperCase()}
+            </span>
           </Button>
 
           <Link href="/cart" className="no-underline">
             <Button
               variant="ghost"
               size="icon"
-              className="relative hover:bg-primary/10"
+              className="relative hover:bg-white/10 hover:text-white py-1 px-2"
             >
               <ShoppingCart className="h-5 w-5" />
               {cartItemsCount > 0 && (
