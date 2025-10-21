@@ -12,6 +12,71 @@
         "buttonExplore": "Istraži naša vina",
         "buttonOurStory": "Naša priča"
     },
+    "grapes": {
+        "plavina": "Plavina",
+        "lasin": "Lasin",
+        "merlot": "Merlot"
+    },
+    "wines": {
+        "title": "Naša kolekcija",
+        "description": "Otkrij našu pažljivo kreiranu selekciju premium hrvatskih vina",
+        "details": "Detalji",
+        "add": "Dodaj",
+        "rose": {
+            "name": "Vinum Bibens Rosé",
+            "type": "Rosé Vino",
+            "description": "Otkrij našu pažljivo kreiranu selekciju premium hrvatskih vina",
+            "fullDescription": "Otkrij našu pažljivo kreiranu selekciju premium hrvatskih vina",
+            "tastingNotes": [
+                "Svježe jagode i lubenica",
+                "Nježne cvjetne note",
+                "Osvježavajući citrusni završetak",
+                "Mineralni podtonovi"
+            ],
+            "foodPairing": [
+                "Morski plodovi s roštilja",
+                "Mediteranske salate",
+                "Lagana tjestenina",
+                "Meki sirevi"
+            ]
+        },
+        "crno": {
+            "name": "Vinum Bibens Crno",
+            "type": "Crveni Blend",
+            "description": "Naš zaštitni znak kombinacije sorti Plavina, Lasina i Merlot koje stvaraju jedinstven hrvatski karakter.",
+            "fullDescription": "Crno predstavlja vrhunac našeg vinskog umijeća. Ovaj prepoznatljivi blend kombinira autohtone hrvatske sorte Plavinu i Lasinu s međunarodnim Merlotom, stvarajući vino koje poštuje tradiciju dok prihvaća modernost. Odležano u hrastovim bačvama, razvija složene slojeve okusa koji se otvaraju sa svakim gutljajem.",
+            "tastingNotes": [
+                "Tamna trešnja i kupina",
+                "Naznake mediteranskog bilja",
+                "Glatki tanini",
+                "Završetak hrasta i vanilije"
+            ],
+            "foodPairing": [
+                "Crveno meso s roštilja",
+                "Zreli sirevi",
+                "Obilni gulaši",
+                "Tamna čokolada"
+            ]
+        },
+        "merlot": {
+            "name": "Vinum Bibens Merlot",
+            "type": "Merlot",
+            "description": "Bogat i baršunast Merlot sa složenim voćnim okusima i elegantnom strukturom.",
+            "fullDescription": "Naš Merlot prikazuje potencijal ove plemenite sorte u jedinstvenom hrvatskom terroiru. Uzgojeno u pažljivo odabranim vinogradima, ovo grožđe ima koristi od idealne izloženosti suncu i hladnih noći. Rezultat je vino izvanredne dubine i elegancije, koje kombinira snagu s profinjenim karakterom u savršenoj harmoniji.",
+            "tastingNotes": [
+                "Zrela šljiva i crna trešnja",
+                "Suptilne note začina",
+                "Svilenkasto glatka tekstura",
+                "Dugi, profinjen završetak"
+            ],
+            "foodPairing": [
+                "Pečena janjetina",
+                "Gljive rižoto",
+                "Tvrdi sirevi",
+                "Goveđi carpaccio"
+            ]
+        }
+    },
     "common": {
         "toggleLanguage": "Promijeni jezik"
     }

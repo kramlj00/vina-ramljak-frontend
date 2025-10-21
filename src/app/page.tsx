@@ -1,9 +1,11 @@
-import Hero from "@/components/hero";
+import Hero from "@/components/home/hero";
+import WineList from "@/components/home/wine-list";
 
 const HomePage = () => {
   return (
     <main>
       <Hero />
+      <WineList />
     </main>
   );
 };
