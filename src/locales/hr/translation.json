@@ -23,6 +23,12 @@
         "fullDescription": "Svaka boca priča priču o predanosti, strasti i poštovanju prema zemlji. Od pažljivog odabira grožđa do strpljivog procesa starenja, svaki korak vođen je našom predanošću izvrsnosti.",
         "learnMore": "Saznaj više o nama"
     },
+    "homeCta": {
+        "title": "Spremni za iskustvo naših vina?",
+        "description": "Posjetite naše vinarstvo ili naručite online i otkrijte izuzetan okus Vinum Bibens",
+        "contact": "Kontaktirajte nas",
+        "shop": "Kupite sada"
+    },
     "wines": {
         "title": "Naša kolekcija",
         "description": "Otkrij našu pažljivo kreiranu selekciju premium hrvatskih vina",

@@ -23,6 +23,12 @@
         "fullDescription": "Each bottle tells a story of dedication, passion, and respect for the land. From the careful selection of grapes to the patient aging process, every step is guided by our commitment to excellence.",
         "learnMore": "Learn More About Us"
     },
+    "homeCta": {
+        "title": "Ready to Experience Our Wines?",
+        "description": "Visit our winery or order online to discover the exceptional taste of Vinum Bibens",
+        "contact": "Contact Us",
+        "shop": "Shop Now"
+    },
     "wines": {
         "title": "Our Collection",
         "description": "Discover our carefully crafted selection of premium Croatian wines",
