@@ -1,8 +1,14 @@
+"use client";
+
 import { Wine, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
+import { config } from "@/config";
 
 const Hero = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       <div
@@ -16,10 +22,10 @@ const Hero = () => {
         <div className="glass-strong rounded-2xl p-8 md:p-12 max-w-3xl mx-auto animate-fade-in">
           <Wine className="w-12 h-12 mx-auto mb-6 text-accent" />
           <h1 className="font-playfair text-5xl md:text-7xl font-bold mb-6 text-gradient-wine">
-            Vinum Bibens
+            {config.metadata.name}
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-foreground/90 font-inter">
-            Premium Croatian wines crafted with passion and tradition
+            {t("hero.title")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/wines">
@@ -27,7 +33,7 @@ const Hero = () => {
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-lg"
               >
-                Explore Our Wines
+                {t("hero.buttonExplore")}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
@@ -37,7 +43,7 @@ const Hero = () => {
                 variant="outline"
                 className="text-lg border-border/50"
               >
-                Our Story
+                {t("hero.buttonOurStory")}
               </Button>
             </Link>
           </div>

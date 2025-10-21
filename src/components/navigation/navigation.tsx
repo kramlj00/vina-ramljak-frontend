@@ -7,6 +7,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
+import { config } from "@/config";
 
 interface IProps {
   cartItemsCount?: number;
@@ -37,7 +38,7 @@ const Navigation = ({ cartItemsCount = 0 }: IProps) => {
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2 no-underline">
           <h1 className="font-playfair text-2xl md:text-3xl font-bold text-gradient-wine">
-            Vinum Bibens
+            {config.metadata.name}
           </h1>
         </Link>
 

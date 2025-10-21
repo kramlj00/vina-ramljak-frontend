@@ -7,6 +7,11 @@
         "about": "About",
         "contact": "Contact"
     },
+    "hero": {
+        "title": "Premium Croatian wines crafted with passion and tradition",
+        "buttonExplore": "Explore Our Wines",
+        "buttonOurStory": "Our Story"
+    },
     "common": {
         "toggleLanguage": "Toggle language"
     }

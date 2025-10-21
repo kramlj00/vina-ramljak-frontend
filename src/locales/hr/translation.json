@@ -7,6 +7,11 @@
         "about": "O Nama",
         "contact": "Kontakt"
     },
+    "hero": {
+        "title": "Premium hrvatska vina kreirana sa strasti i tradicijom",
+        "buttonExplore": "Istraži naša vina",
+        "buttonOurStory": "Naša priča"
+    },
     "common": {
         "toggleLanguage": "Promijeni jezik"
     }
