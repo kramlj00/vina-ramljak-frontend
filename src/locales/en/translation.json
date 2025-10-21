@@ -17,6 +17,12 @@
         "lasin": "Lasin",
         "merlot": "Merlot"
     },
+    "about": {
+        "title": "Tradition Meets Excellence",
+        "description": "At Vinum Bibens, we blend centuries-old Croatian winemaking traditions with modern techniques to create exceptional wines. Our vineyards benefit from the unique Mediterranean climate and rich soil, producing grapes of outstanding quality.",
+        "fullDescription": "Each bottle tells a story of dedication, passion, and respect for the land. From the careful selection of grapes to the patient aging process, every step is guided by our commitment to excellence.",
+        "learnMore": "Learn More About Us"
+    },
     "wines": {
         "title": "Our Collection",
         "description": "Discover our carefully crafted selection of premium Croatian wines",
