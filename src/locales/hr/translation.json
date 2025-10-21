@@ -29,6 +29,26 @@
         "contact": "Kontaktirajte nas",
         "shop": "Kupite sada"
     },
+    "footer": {
+        "title": "Premium hrvatska vina kreirana sa strasti i tradicijom.",
+        "quickLinks": {
+            "title": "Brze poveznice",
+            "wines": "Naša vina",
+            "about": "O Nama",
+            "blog": "Blog",
+            "contact": "Kontaktirajte nas",
+            "contactInfo": {
+                "title": "Kontakt informacije",
+                "country": "Hrvatska"
+            },
+            "social": {
+                "title": "Zapratite nas"
+            },
+            "copyright": {
+                "allRightsReserved": "Sva prava zadržana."
+            }
+        }
+    },
     "wines": {
         "title": "Naša kolekcija",
         "description": "Otkrij našu pažljivo kreiranu selekciju premium hrvatskih vina",

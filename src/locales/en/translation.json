@@ -29,6 +29,26 @@
         "contact": "Contact Us",
         "shop": "Shop Now"
     },
+    "footer": {
+        "title": "Premium Croatian wines crafted with passion and tradition.",
+        "quickLinks": {
+            "title": "Quick Links",
+            "wines": "Our Wines",
+            "about": "About Us",
+            "blog": "Blog",
+            "contact": "Contact Us",
+            "contactInfo": {
+                "title": "Contact Info",
+                "country": "Croatia"
+            },
+            "social": {
+                "title": "Follow Us"
+            },
+            "copyright": {
+                "allRightsReserved": "All rights reserved."
+            }
+        }
+    },
     "wines": {
         "title": "Our Collection",
         "description": "Discover our carefully crafted selection of premium Croatian wines",
