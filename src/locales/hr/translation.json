@@ -128,6 +128,12 @@
             "foodPairing": "Pečena janjetina, Gljive rižoto, Tvrdi sirevi, Goveđi carpaccio"
         }
     },
+    "cookieBanner": {
+        "title": "Oglašavanje kolačića",
+        "description": "Koristimo kolačiće kako bismo poboljšali vaše iskustvo na našoj web stranici i analizirali našu promet. Klikom na \"Prihvaćam\", slažete se s našim korištenjem kolačića.",
+        "accept": "Prihvaćam",
+        "decline": "Odbijam"
+    },
     "common": {
         "toggleLanguage": "Promijeni jezik",
         "backToHome": "Povratak na početnu stranicu",

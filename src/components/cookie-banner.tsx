@@ -2,8 +2,11 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
+import { useTranslation } from "react-i18next";
 
 const CookieBanner = () => {
+  const { t } = useTranslation();
+
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -32,12 +35,10 @@ const CookieBanner = () => {
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
             <div className="flex-1">
               <h3 className="font-playfair font-semibold text-lg mb-2">
-                Cookie Notice
+                {t("cookieBanner.title")}
               </h3>
               <p className="text-sm text-muted-foreground">
-                We use cookies to enhance your browsing experience and analyze
-                our traffic. By clicking &quot;Accept&quot;, you consent to our
-                use of cookies.
+                {t("cookieBanner.description")}
               </p>
             </div>
             <div className="flex items-center space-x-3">
@@ -47,14 +48,14 @@ const CookieBanner = () => {
                 onClick={declineCookies}
                 className="border-border/50"
               >
-                Decline
+                {t("cookieBanner.decline")}
               </Button>
               <Button
                 size="sm"
                 onClick={acceptCookies}
                 className="bg-primary hover:bg-primary/90"
               >
-                Accept
+                {t("cookieBanner.accept")}
               </Button>
             </div>
           </div>
