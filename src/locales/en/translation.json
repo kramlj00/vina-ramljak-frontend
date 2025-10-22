@@ -134,9 +134,18 @@
         "accept": "Accept",
         "decline": "Decline"
     },
+    "cart": {
+        "title": "Shopping Cart",
+        "empty": {
+            "title": "Your cart is empty",
+            "description": "Add some wines to your cart to get started",
+            "button": "Browse Wines"
+        }
+    },
     "common": {
         "toggleLanguage": "Toggle language",
         "backToHome": "Back to Home",
-        "addToCart": "Add to Cart"
+        "addToCart": "Add to Cart",
+        "continueShopping": "Continue Shopping"
     }
 }
