@@ -2,10 +2,15 @@
     "navigation": {
         "home": "Home",
         "wines": "Wines",
+        "winesAnchor": "wines",
         "gallery": "Gallery",
+        "galleryAnchor": "gallery",
         "blog": "Blog",
+        "blogAnchor": "blog",
         "about": "About",
-        "contact": "Contact"
+        "aboutAnchor": "about",
+        "contact": "Contact",
+        "contactAnchor": "contact"
     },
     "hero": {
         "title": "Premium Croatian wines crafted with passion and tradition",

@@ -11,7 +11,7 @@ const AboutUs = () => {
   const aboutUsDetails = getAboutUsDetails(t);
 
   return (
-    <section className="py-20">
+    <section id={t("navigation.aboutAnchor")} className="py-20">
       <div className="container mx-auto px-4">
         <SectionTitle
           title={t("about.title")}

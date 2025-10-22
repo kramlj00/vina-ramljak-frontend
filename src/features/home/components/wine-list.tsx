@@ -11,7 +11,7 @@ const WineList = () => {
   const wines = getWines(t);
 
   return (
-    <section className="py-20">
+    <section id={t("navigation.winesAnchor")} className="py-20">
       <div className="container mx-auto px-4">
         <SectionTitle
           title={t("wines.title")}

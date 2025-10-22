@@ -1,10 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ShoppingCart, Menu, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { config } from "@/config";
@@ -14,23 +13,61 @@ interface IProps {
 }
 
 const Navigation = ({ cartItemsCount = 0 }: IProps) => {
-  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const [active, setActive] = useState("");
+
   const { t, i18n } = useTranslation();
 
   const navLinks = [
-    { path: "/", label: t("navigation.home") },
-    { path: "/wines", label: t("navigation.wines") },
-    { path: "/gallery", label: t("navigation.gallery") },
-    { path: "/blog", label: t("navigation.blog") },
-    { path: "/about", label: t("navigation.about") },
-    { path: "/contact", label: t("navigation.contact") },
+    { path: "", label: t("navigation.home") },
+    { path: t("navigation.winesAnchor"), label: t("navigation.wines") },
+    { path: t("navigation.galleryAnchor"), label: t("navigation.gallery") },
+    { path: t("navigation.blogAnchor"), label: t("navigation.blog") },
+    { path: t("navigation.aboutAnchor"), label: t("navigation.about") },
+    { path: t("navigation.contactAnchor"), label: t("navigation.contact") },
   ];
 
   const toggleLanguage = () => {
     const newLang = i18n.language === "hr" ? "en" : "hr";
     i18n.changeLanguage(newLang);
   };
+
+  useEffect(() => {
+    setActive(window.location.hash.slice(1) || "");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const intersectingSection = entries.find(
+          (entry) => entry.isIntersecting
+        );
+        if (intersectingSection) {
+          const id = intersectingSection.target.id;
+          setActive(id);
+          window.history.replaceState(null, "", `#${id}`);
+        } else {
+          setActive("");
+          window.history.replaceState(
+            null,
+            "",
+            i18n.language.split("-")[0] === "en" ? "/" : "/hr"
+          );
+        }
+      },
+      {
+        rootMargin: "-50% 0px -50% 0px",
+      }
+    );
+
+    navLinks.forEach(({ path }) => {
+      const element = document.getElementById(path);
+      if (element) observer.observe(element);
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [i18n.language]);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass w-full">
@@ -47,9 +84,9 @@ const Navigation = ({ cartItemsCount = 0 }: IProps) => {
           {navLinks.map((link) => (
             <Link
               key={link.path}
-              href={link.path}
+              href={`#${link.path}`}
               className={`text-sm font-inter font-medium transition-colors hover:text-accent no-underline ${
-                pathname === link.path ? "text-accent" : "text-foreground"
+                active === link.path ? "text-accent" : "text-foreground"
               }`}
             >
               {link.label}
@@ -102,10 +139,10 @@ const Navigation = ({ cartItemsCount = 0 }: IProps) => {
                 {navLinks.map((link) => (
                   <Link
                     key={link.path}
-                    href={link.path}
+                    href={`#${link.path}`}
                     onClick={() => setIsOpen(false)}
                     className={`text-lg font-inter font-medium transition-colors hover:text-accent no-underline ${
-                      pathname === link.path ? "text-accent" : "text-foreground"
+                      active === link.path ? "text-accent" : "text-foreground"
                     }`}
                   >
                     {link.label}

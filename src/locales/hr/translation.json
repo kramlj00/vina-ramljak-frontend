@@ -2,10 +2,15 @@
     "navigation": {
         "home": "Početna",
         "wines": "Vina",
+        "winesAnchor": "vina",
         "gallery": "Galerija",
+        "galleryAnchor": "galerija",
         "blog": "Blog",
+        "blogAnchor": "blog",
         "about": "O Nama",
-        "contact": "Kontakt"
+        "aboutAnchor": "o-nama",
+        "contact": "Kontakt",
+        "contactAnchor": "kontakt"
     },
     "hero": {
         "title": "Premium hrvatska vina kreirana sa strasti i tradicijom",
