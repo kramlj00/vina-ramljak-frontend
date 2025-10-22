@@ -5,6 +5,7 @@ import Navigation from "@/components/navigation";
 import { I18nProvider } from "@/components/providers";
 import Footer from "@/components/footer";
 import CookieBanner from "@/components/cookie-banner";
+import { CartProvider } from "@/context/cart-context";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,10 +33,12 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
       >
         <I18nProvider>
-          <CookieBanner />
-          <Navigation />
-          {children}
-          <Footer />
+          <CartProvider>
+            <CookieBanner />
+            <Navigation />
+            {children}
+            <Footer />
+          </CartProvider>
         </I18nProvider>
       </body>
     </html>

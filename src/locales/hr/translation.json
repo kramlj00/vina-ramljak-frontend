@@ -140,6 +140,16 @@
             "title": "Vaša košarica je prazna",
             "description": "Dodajte neka vina u vašu košaricu kako biste započeli",
             "button": "Pregledaj vina"
+        },
+        "clearCart": "Isprazni košaricu",
+        "checkout": "Naruči",
+        "secureCheckout": "Sigurna naplata putem Stripe",
+        "summary": {
+            "title": "Sažetak narudžbe",
+            "subtotal": "Međuzbroj",
+            "shipping": "Dostava",
+            "total": "Ukupno",
+            "free": "Besplatno"
         }
     },
     "common": {

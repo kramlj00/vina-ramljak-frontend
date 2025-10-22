@@ -8,12 +8,10 @@ import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { config } from "@/config";
 import { usePathname } from "next/navigation";
+import { useCart } from "@/context/cart-context";
 
-interface IProps {
-  cartItemsCount?: number;
-}
-
-const Navigation = ({ cartItemsCount = 0 }: IProps) => {
+const Navigation = () => {
+  const { totalItems } = useCart();
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [active, setActive] = useState("");
@@ -140,9 +138,9 @@ const Navigation = ({ cartItemsCount = 0 }: IProps) => {
               className="relative hover:bg-white/10 hover:text-white py-1 px-2"
             >
               <ShoppingCart className="h-5 w-5" />
-              {cartItemsCount > 0 && (
+              {totalItems > 0 && (
                 <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold">
-                  {cartItemsCount}
+                  {totalItems}
                 </span>
               )}
             </Button>

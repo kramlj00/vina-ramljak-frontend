@@ -140,6 +140,16 @@
             "title": "Your cart is empty",
             "description": "Add some wines to your cart to get started",
             "button": "Browse Wines"
+        },
+        "clearCart": "Clear Cart",
+        "checkout": "Proceed to Checkout",
+        "secureCheckout": "Secure checkout powered by Stripe",
+        "summary": {
+            "title": "Order Summary",
+            "subtotal": "Subtotal",
+            "shipping": "Shipping",
+            "total": "Total",
+            "free": "Free"
         }
     },
     "common": {
