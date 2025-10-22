@@ -1,0 +1,63 @@
+// Prisma schema for Vina Ramljak
+// Database: PostgreSQL (Supabase)
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+model Order {
+    id              String @id @default(cuid())
+    stripeSessionId String @unique
+
+    // Customer information
+    customerEmail String
+    customerName  String?
+
+    // Order details
+    total    Float
+    subtotal Float
+    shipping Float       @default(0)
+    currency String      @default("eur")
+    status   OrderStatus @default(PENDING)
+
+    // Items stored as JSON array
+    // Format: [{wineId: "rose", name: "...", price: 18, quantity: 2}, ...]
+    items Json
+
+    // Addresses stored as JSON
+    shippingAddress Json?
+    billingAddress  Json?
+
+    // Stripe payment details
+    paymentIntentId String?
+    paymentStatus   String? // paid, unpaid, no_payment_required
+
+    // Additional metadata
+    notes String?
+
+    // Timestamps
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+
+    // Indexes for performance
+    @@index([customerEmail])
+    @@index([status])
+    @@index([createdAt(sort: Desc)])
+    @@index([stripeSessionId])
+    @@map("orders")
+}
+
+enum OrderStatus {
+    PENDING // Order created, payment pending
+    PAID // Payment successful
+    PROCESSING // Order being processed
+    SHIPPED // Order shipped
+    DELIVERED // Order delivered
+    CANCELLED // Order cancelled
+    REFUNDED // Payment refunded
+}

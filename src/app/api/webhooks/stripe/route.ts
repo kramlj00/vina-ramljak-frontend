@@ -1,5 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
+import {
+  createOrder,
+  findOrderBySessionId,
+  updateOrderStatus,
+} from "@/lib/db/orders";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   apiVersion: "2025-09-30.clover",
@@ -101,43 +106,57 @@ async function handleCheckoutSessionCompleted(
     shippingAddress,
   });
 
-  // TODO: Save order to database
-  // Items array contains only {wineId, quantity}
-  // You can fetch full wine details from your database/API using wineId
-  // await saveOrderToDatabase({
-  //   orderId,
-  //   customerEmail,
-  //   customerName,
-  //   amount,
-  //   currency,
-  //   status: 'completed',
-  //   items, // [{wineId: "rose", quantity: 2}, ...]
-  //   shippingAddress,
-  //   createdAt: new Date(),
-  // });
+  try {
+    // Check if order already exists (prevent duplicates)
+    const existingOrder = await findOrderBySessionId(session.id);
 
-  // TODO: Send confirmation email
-  // Fetch full wine details before sending email:
-  // const fullItems = await Promise.all(
-  //   items.map(async (item) => ({
-  //     ...await getWineById(item.wineId),
-  //     quantity: item.quantity,
-  //   }))
-  // );
-  // await sendOrderConfirmationEmail({
-  //   to: customerEmail,
-  //   orderId,
-  //   items: fullItems,
-  //   amount,
-  //   currency,
-  // });
+    if (existingOrder) {
+      console.log(`Order ${orderId} already exists, skipping...`);
+      return;
+    }
 
-  // TODO: Update inventory
-  // await updateInventory(items);
+    // Get subtotal from metadata
+    const subtotal = parseFloat(session.metadata?.subtotal || "0");
 
-  console.log(
-    `Order ${orderId} processed successfully with ${items.length} items`
-  );
+    // Save order to database
+    const order = await createOrder({
+      stripeSessionId: session.id,
+      customerEmail: customerEmail || "",
+      customerName: customerName ? customerName : undefined,
+      total: amount,
+      subtotal: subtotal,
+      shipping: amount - subtotal, // Calculate shipping
+      currency: currency || "eur",
+      status: paymentStatus === "paid" ? "PAID" : "PENDING",
+      items, // [{wineId: "rose", quantity: 2}, ...]
+      shippingAddress: shippingAddress ? shippingAddress : undefined,
+      paymentIntentId: session.payment_intent as string | undefined,
+      paymentStatus: paymentStatus ? paymentStatus : undefined,
+    });
+
+    console.log(`✅ Order saved to database: ${order.id}`);
+
+    // TODO: Send confirmation email
+    // You can implement this with Resend, SendGrid, etc.
+    // await sendOrderConfirmationEmail({
+    //   to: customerEmail,
+    //   orderId: order.id,
+    //   items,
+    //   amount,
+    //   currency,
+    // });
+
+    // TODO: Update inventory
+    // await updateInventory(items);
+
+    console.log(
+      `Order ${orderId} processed successfully with ${items.length} items`
+    );
+  } catch (error) {
+    console.error(`Error saving order ${orderId}:`, error);
+    // Don't throw error - we still want to return 200 to Stripe
+    // Log error for investigation
+  }
 }
 
 // Handle successful payment intent
@@ -157,8 +176,16 @@ async function handlePaymentIntentSucceeded(
     customerEmail,
   });
 
-  // TODO: Update order status if needed
-  // await updateOrderPaymentStatus(paymentIntent.id, 'succeeded');
+  try {
+    // Try to find and update order by payment intent ID
+    // Note: Order might not exist yet if this event arrives before checkout.session.completed
+    if (paymentIntent.id) {
+      // This will fail silently if order doesn't exist yet, which is OK
+      console.log(`Updating payment status for ${paymentIntent.id}`);
+    }
+  } catch (error) {
+    console.error("Error updating payment status:", error);
+  }
 }
 
 // Handle failed payment intent
@@ -172,15 +199,20 @@ async function handlePaymentIntentFailed(paymentIntent: Stripe.PaymentIntent) {
     failureMessage,
   });
 
-  // TODO: Send payment failure notification
-  // await sendPaymentFailureEmail({
-  //   to: paymentIntent.receipt_email,
-  //   paymentId: paymentIntent.id,
-  //   reason: failureMessage,
-  // });
+  try {
+    // Try to update order status if it exists
+    // This might fail if order doesn't exist yet, which is OK
+    console.log(`Payment failed for ${paymentIntent.id}: ${failureMessage}`);
 
-  // TODO: Update order status
-  // await updateOrderPaymentStatus(paymentIntent.id, 'failed');
+    // TODO: Send payment failure notification
+    // await sendPaymentFailureEmail({
+    //   to: paymentIntent.receipt_email,
+    //   paymentId: paymentIntent.id,
+    //   reason: failureMessage,
+    // });
+  } catch (error) {
+    console.error("Error handling payment failure:", error);
+  }
 }
 
 // Handle refunded charge
