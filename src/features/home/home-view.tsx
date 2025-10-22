@@ -1,4 +1,5 @@
 import AboutUs from "./components/about-us";
+import Gallery from "./components/gallery";
 import Hero from "./components/hero";
 import HomeCta from "./components/home-cta";
 import WineList from "./components/wine-list";
@@ -9,6 +10,7 @@ const HomeView = () => {
       <Hero />
       <WineList />
       <AboutUs />
+      <Gallery />
       <HomeCta />
     </main>
   );

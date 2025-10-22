@@ -37,6 +37,11 @@
         "terroir": "Terroir",
         "terroirDescription": "Respecting and showcasing our unique Croatian terroir"
     },
+    "gallery": {
+        "title": "Gallery",
+        "description": "A visual journey through our vineyard and wines",
+        "ourVineyard": "Our Vineyard"
+    },
     "homeCta": {
         "title": "Ready to Experience Our Wines?",
         "description": "Visit our winery or order online to discover the exceptional taste of Vinum Bibens",

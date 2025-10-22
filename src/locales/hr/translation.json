@@ -37,6 +37,11 @@
         "terroir": "Vinogorje",
         "terroirDescription": "Poštujemo i ističemo jedinstveni karakter našeg vinogorja"
     },
+    "gallery": {
+        "title": "Galerija",
+        "description": "Vizualni put kroz naš vinograd i vina",
+        "ourVineyard": "Naš Vinograd"
+    },
     "homeCta": {
         "title": "Spremni za iskustvo naših vina?",
         "description": "Posjetite naše vinarstvo ili naručite online i otkrijte izuzetan okus Vinum Bibens",
