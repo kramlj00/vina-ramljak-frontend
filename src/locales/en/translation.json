@@ -89,6 +89,15 @@
             }
         }
     },
+    "wine": {
+        "notFound": "Wine not found",
+        "vintage": "Vintage",
+        "alcohol": "Alcohol",
+        "grapes": "Grapes",
+        "tastingNotes": "Tasting Notes",
+        "foodPairing": "Food Pairing",
+        "perBottle": "per bottle"
+    },
     "wines": {
         "title": "Our Collection",
         "description": "Discover our carefully crafted selection of premium Croatian wines",
@@ -99,70 +108,29 @@
             "type": "Rosé Wine",
             "description": "Elegant Croatian rosé with delicate fruit notes and refreshing acidity.",
             "fullDescription": "Our Rosé is a beautiful expression of Croatian winemaking tradition. With its delicate salmon-pink color and refined character, this wine captures the essence of summer in every glass. The careful selection of grapes and gentle pressing create a wine that is both elegant and refreshing.",
-            "grapes": [
-                "Plavina",
-                "Merlot"
-            ],
-            "tastingNotes": [
-                "Fresh strawberry and watermelon",
-                "Delicate floral notes",
-                "Crisp citrus finish",
-                "Mineral undertones"
-            ],
-            "foodPairing": [
-                "Grilled seafood",
-                "Mediterranean salads",
-                "Light pasta dishes",
-                "Soft cheeses"
-            ]
+            "tastingNotes": "Fresh strawberry and watermelon, Delicate floral notes, Crisp citrus finish, Mineral undertones",
+            "foodPairing": "Grilled seafood, Mediterranean salads, Light pasta dishes, Soft cheeses"
         },
         "crno": {
             "name": "Vinum Bibens Crno",
             "type": "Red Blend",
             "description": "Our signature blend of Plavina, Lasina, and Merlot grapes creating a unique Croatian character.",
             "fullDescription": "Crno represents the pinnacle of our winemaking expertise. This distinctive blend combines indigenous Croatian varieties Plavina and Lasina with the international Merlot, creating a wine that honors tradition while embracing modernity. Aged in oak barrels, it develops complex layers of flavor that unfold with each sip.",
-            "grapes": [
-                "Plavina",
-                "Lasina",
-                "Merlot"
-            ],
-            "tastingNotes": [
-                "Dark cherry and blackberry",
-                "Hints of Mediterranean herbs",
-                "Smooth tannins",
-                "Oak and vanilla finish"
-            ],
-            "foodPairing": [
-                "Grilled red meats",
-                "Aged cheeses",
-                "Hearty stews",
-                "Dark chocolate"
-            ]
+            "tastingNotes": "Dark cherry and blackberry, Hints of Mediterranean herbs, Smooth tannins, Oak and vanilla finish",
+            "foodPairing": "Grilled red meats, Aged cheeses, Hearty stews, Dark chocolate"
         },
         "merlot": {
             "name": "Vinum Bibens Merlot",
             "type": "Merlot",
             "description": "Rich and velvety Merlot with complex fruit flavors and elegant structure.",
             "fullDescription": "Our Merlot showcases the potential of this noble variety in Croatia's unique terroir. Grown in carefully selected vineyards, these grapes benefit from ideal sun exposure and cool nights. The result is a wine with remarkable depth and elegance, combining power with refinement in perfect harmony.",
-            "grapes": [
-                "Merlot"
-            ],
-            "tastingNotes": [
-                "Ripe plum and black cherry",
-                "Subtle spice notes",
-                "Silky smooth texture",
-                "Long, refined finish"
-            ],
-            "foodPairing": [
-                "Roasted lamb",
-                "Mushroom risotto",
-                "Hard cheeses",
-                "Beef carpaccio"
-            ]
+            "tastingNotes": "Ripe plum and black cherry, Subtle spice notes, Silky smooth texture, Long, refined finish",
+            "foodPairing": "Roasted lamb, Mushroom risotto, Hard cheeses, Beef carpaccio"
         }
     },
     "common": {
         "toggleLanguage": "Toggle language",
-        "backToHome": "Back to Home"
+        "backToHome": "Back to Home",
+        "addToCart": "Add to Cart"
     }
 }

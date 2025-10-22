@@ -53,7 +53,7 @@ const WineCard = ({
           </span>
 
           <div className="flex space-x-2">
-            <Link href={`/wines/${id}`}>
+            <Link href={`/wine/${id}`}>
               <Button variant="outline" size="sm" className="border-border/50">
                 {t("wines.details")}
               </Button>
