@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslation } from "react-i18next";
-import { getWines } from "../home.utils";
+import { getWines } from "../utils";
 import WineCard from "./wine-card";
 
 const WineList = () => {

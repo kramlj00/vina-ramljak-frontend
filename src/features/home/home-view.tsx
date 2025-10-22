@@ -1,4 +1,4 @@
-import AboutPreview from "./components/about-preview";
+import AboutUs from "./components/about-us";
 import Hero from "./components/hero";
 import HomeCta from "./components/home-cta";
 import WineList from "./components/wine-list";
@@ -8,7 +8,7 @@ const HomeView = () => {
     <main>
       <Hero />
       <WineList />
-      <AboutPreview />
+      <AboutUs />
       <HomeCta />
     </main>
   );

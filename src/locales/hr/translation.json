@@ -18,10 +18,19 @@
         "merlot": "Merlot"
     },
     "about": {
-        "title": "Tradicija Susreće Izvrsnost",
-        "description": "U Vinum Bibens spajamo stoljetne hrvatske tradicije vinogradarstva s modernim tehnikama kako bismo stvorili izuzetna vina. Naši vinogradi imaju koristi od jedinstvene mediteranske klime i bogate tla, proizvodeći grožđe izvanredne kvalitete.",
-        "fullDescription": "Svaka boca priča priču o predanosti, strasti i poštovanju prema zemlji. Od pažljivog odabira grožđa do strpljivog procesa starenja, svaki korak vođen je našom predanošću izvrsnosti.",
-        "learnMore": "Saznaj više o nama"
+        "title": "O Nama",
+        "description": "Priča o strasti, tradiciji i izvrsnosti",
+        "ourStory": "Naša Priča",
+        "story1": "Vinum Bibens osnovan je s jednostavnom, ali dubokom vizijom: stvarati vina koja obuhvaćaju bit hrvatske vinske baštine uz istovremeno prihvaćanje inovacija i težnju za izvrsnosti.",
+        "story2": "Smješteni u srcu hrvatskog vinogorja, naši vinogradi uživaju blagodati stoljetne tradicije vinarstva i jedinstvene mikroklime koja našim vinima daje poseban karakter.",
+        "quality": "Kvaliteta",
+        "qualityDescription": "Nikada ne kompromitiramo kvalitetu - od odabira grožđa do punjenja u boce",
+        "tradition": "Tradicija",
+        "traditionDescription": "Njegujemo stoljetne tehnike vinarstva i autohtone sorte grožđa",
+        "innovation": "Inovacija",
+        "innovationDescription": "Primjenjujemo suvremene tehnike vinarstva kako bismo stvorili izuzetna vina",
+        "terroir": "Vinogorje",
+        "terroirDescription": "Poštujemo i ističemo jedinstveni karakter našeg vinogorja"
     },
     "homeCta": {
         "title": "Spremni za iskustvo naših vina?",
