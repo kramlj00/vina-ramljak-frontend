@@ -152,6 +152,23 @@
             "free": "Besplatno"
         }
     },
+    "checkout": {
+        "processing": "Obrađujem...",
+        "error": "Greška pri obradi plaćanja. Molimo pokušajte ponovno.",
+        "success": {
+            "title": "Uspješna kupnja!",
+            "description": "Hvala vam na narudžbi. Vaša narudžba je uspješno primljena.",
+            "orderNumber": "Broj narudžbe:",
+            "emailConfirmation": "Poslali smo vam potvrdu na email.",
+            "backToHome": "Povratak na početnu"
+        },
+        "cancel": {
+            "title": "Narudžba otkazana",
+            "description": "Vaša narudžba je otkazana. Košarica je sačuvana i možete nastaviti s kupnjom.",
+            "backToCart": "Povratak u košaricu",
+            "backToHome": "Povratak na početnu"
+        }
+    },
     "common": {
         "toggleLanguage": "Promijeni jezik",
         "backToHome": "Povratak na početnu stranicu",

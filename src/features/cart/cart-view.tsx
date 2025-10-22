@@ -1,20 +1,52 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Loader2 } from "lucide-react";
 import Link from "next/link";
 import EmptyCart from "./components/empty-cart";
 import { useTranslation } from "react-i18next";
 import { useCart } from "@/context/cart-context";
 import CartItem from "./components/cart-item";
+import { useState } from "react";
 
 const CartView = () => {
   const { t } = useTranslation();
   const { items, updateQuantity, removeFromCart, clearCart, totalPrice } =
     useCart();
+  const [isLoading, setIsLoading] = useState(false);
 
   const shippingCost: number = 0; // Free shipping for now
   const finalTotal = totalPrice + shippingCost;
+
+  const handleCheckout = async () => {
+    setIsLoading(true);
+
+    try {
+      // Call API to create checkout session
+      const response = await fetch("/api/checkout", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ items }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to create checkout session");
+      }
+
+      // Redirect to Stripe Checkout using the URL from the session
+      if (data.url) {
+        window.location.href = data.url;
+      }
+    } catch (error) {
+      console.error("Checkout error:", error);
+      alert(t("checkout.error"));
+      setIsLoading(false);
+    }
+  };
 
   return (
     <div className="pt-32 pb-20">
@@ -88,8 +120,17 @@ const CartView = () => {
               <Button
                 size="lg"
                 className="w-full bg-primary hover:bg-primary/90 mb-3"
+                onClick={handleCheckout}
+                disabled={isLoading}
               >
-                {t("cart.checkout")}
+                {isLoading ? (
+                  <>
+                    <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                    {t("checkout.processing")}
+                  </>
+                ) : (
+                  t("cart.checkout")
+                )}
               </Button>
               <p className="text-xs text-muted-foreground text-center">
                 {t("cart.secureCheckout")}

@@ -152,6 +152,23 @@
             "free": "Free"
         }
     },
+    "checkout": {
+        "processing": "Processing...",
+        "error": "Payment processing error. Please try again.",
+        "success": {
+            "title": "Purchase Successful!",
+            "description": "Thank you for your order. Your order has been successfully received.",
+            "orderNumber": "Order Number:",
+            "emailConfirmation": "We've sent you a confirmation email.",
+            "backToHome": "Back to Home"
+        },
+        "cancel": {
+            "title": "Order Cancelled",
+            "description": "Your order has been cancelled. Your cart has been saved and you can continue shopping.",
+            "backToCart": "Back to Cart",
+            "backToHome": "Back to Home"
+        }
+    },
     "common": {
         "toggleLanguage": "Toggle language",
         "backToHome": "Back to Home",
