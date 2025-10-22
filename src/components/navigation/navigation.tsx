@@ -46,11 +46,7 @@ const Navigation = ({ cartItemsCount = 0 }: IProps) => {
           window.history.replaceState(null, "", `#${id}`);
         } else {
           setActive("");
-          window.history.replaceState(
-            null,
-            "",
-            i18n.language.split("-")[0] === "en" ? "/" : "/hr"
-          );
+          window.history.replaceState(null, "", "/");
         }
       },
       {
