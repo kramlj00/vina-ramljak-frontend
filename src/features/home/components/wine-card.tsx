@@ -1,6 +1,6 @@
 import { ShoppingCart } from "lucide-react";
 import Link from "next/link";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 
 interface WineCardProps {
@@ -53,7 +53,7 @@ const WineCard = ({
           </span>
 
           <div className="flex space-x-2">
-            <Link href={`/wines/${id}`}>
+            <Link href={`/wine/${id}`}>
               <Button variant="outline" size="sm" className="border-border/50">
                 {t("wines.details")}
               </Button>

@@ -16,6 +16,7 @@ export interface Wine {
 }
 
 export const getWines = (t: TFunction): Wine[] => {
+  console.log(t("wines.merlot.tastingNotes"));
   return [
     {
       id: "rose",
@@ -61,4 +62,8 @@ export const getWines = (t: TFunction): Wine[] => {
       foodPairing: t("wines.merlot.foodPairing").split(","),
     },
   ];
+};
+
+export const getWine = (t: TFunction, id: string) => {
+  return getWines(t).find((wine) => wine.id === id);
 };
