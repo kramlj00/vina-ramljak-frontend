@@ -83,10 +83,10 @@
             },
             "social": {
                 "title": "Zapratite nas"
-            },
-            "copyright": {
-                "allRightsReserved": "Sva prava zadržana."
             }
+        },
+        "copyright": {
+            "allRightsReserved": "Sva prava zadržana."
         }
     },
     "wine": {

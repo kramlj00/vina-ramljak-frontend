@@ -83,10 +83,10 @@
             },
             "social": {
                 "title": "Follow Us"
-            },
-            "copyright": {
-                "allRightsReserved": "All rights reserved."
             }
+        },
+        "copyright": {
+            "allRightsReserved": "All rights reserved."
         }
     },
     "wine": {

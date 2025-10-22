@@ -1,69 +1,97 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { ShoppingCart, Menu, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { config } from "@/config";
+import { usePathname } from "next/navigation";
 
 interface IProps {
   cartItemsCount?: number;
 }
 
 const Navigation = ({ cartItemsCount = 0 }: IProps) => {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [active, setActive] = useState("");
 
   const { t, i18n } = useTranslation();
 
-  const navLinks = [
-    { path: "", label: t("navigation.home") },
-    { path: t("navigation.winesAnchor"), label: t("navigation.wines") },
-    { path: t("navigation.aboutAnchor"), label: t("navigation.about") },
-    { path: t("navigation.galleryAnchor"), label: t("navigation.gallery") },
-    { path: t("navigation.blogAnchor"), label: t("navigation.blog") },
-    { path: t("navigation.contactAnchor"), label: t("navigation.contact") },
-  ];
+  const navLinks = useMemo(
+    () => [
+      { path: t("navigation.winesAnchor"), label: t("navigation.wines") },
+      { path: t("navigation.aboutAnchor"), label: t("navigation.about") },
+      { path: t("navigation.galleryAnchor"), label: t("navigation.gallery") },
+      { path: t("navigation.blogAnchor"), label: t("navigation.blog") },
+      { path: t("navigation.contactAnchor"), label: t("navigation.contact") },
+    ],
+    [t]
+  );
 
   const toggleLanguage = () => {
     const newLang = i18n.language === "hr" ? "en" : "hr";
     i18n.changeLanguage(newLang);
   };
 
+  // Handle initial scroll to hash on page load
   useEffect(() => {
-    setActive(window.location.hash.slice(1) || "");
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const intersectingSection = entries.find(
-          (entry) => entry.isIntersecting
-        );
-        if (intersectingSection) {
-          const id = intersectingSection.target.id;
-          setActive(id);
-          window.history.replaceState(null, "", `#${id}`);
-        } else {
-          setActive("");
-          window.history.replaceState(null, "", "/");
+    const hash = window.location.hash.slice(1);
+    if (hash && pathname === "/") {
+      // Wait for DOM to be ready
+      setTimeout(() => {
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
         }
-      },
-      {
-        rootMargin: "-50% 0px -50% 0px",
-      }
-    );
+      }, 100);
+    }
+  }, [pathname]);
 
-    navLinks.forEach(({ path }) => {
-      const element = document.getElementById(path);
-      if (element) observer.observe(element);
-    });
+  useEffect(() => {
+    setActive(window.location.hash.slice(1) || pathname);
 
-    return () => {
-      observer.disconnect();
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [i18n.language]);
+    const isHomePage = pathname === "/";
+    if (isHomePage) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          const intersectingSection = entries.find(
+            (entry) => entry.isIntersecting
+          );
+          if (intersectingSection) {
+            const id = intersectingSection.target.id;
+            setActive(id);
+            window.history.replaceState(null, "", `#${id}`);
+          } else {
+            setActive("");
+          }
+        },
+        {
+          rootMargin: "-50% 0px -50% 0px",
+        }
+      );
+
+      navLinks.forEach(({ path }) => {
+        const element = document.getElementById(path);
+        if (element) observer.observe(element);
+      });
+
+      return () => {
+        observer.disconnect();
+      };
+    }
+  }, [pathname, navLinks]);
+
+  const handleLinkClick = (href: string) => {
+    if (pathname !== "/") {
+      window.location.href = `/#${href}`;
+      return;
+    }
+
+    setActive(href);
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass w-full">
@@ -81,6 +109,7 @@ const Navigation = ({ cartItemsCount = 0 }: IProps) => {
             <Link
               key={link.path}
               href={`#${link.path}`}
+              onClick={() => handleLinkClick(link.path)}
               className={`text-sm font-inter font-medium transition-colors hover:text-accent no-underline ${
                 active === link.path ? "text-accent" : "text-foreground"
               }`}
