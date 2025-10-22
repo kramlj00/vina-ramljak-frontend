@@ -51,7 +51,8 @@
             "content": "Croatian winemaking is a beautiful blend of ancient traditions and modern innovation. For centuries, our ancestors have cultivated grapes in this blessed land, developing techniques that have been passed down through generations.\nThe unique terroir of Croatia, with its Mediterranean climate and diverse soil compositions, creates ideal conditions for producing exceptional wines. From the coastal regions to the inland valleys, each area contributes its own character to our wines.\nAt Vinum Bibens, we honor these traditions while embracing modern winemaking techniques. Our oak barrel aging process, temperature-controlled fermentation, and careful grape selection ensure that every bottle represents the best of both worlds.\nWe work with indigenous Croatian grape varieties like Plavina and Lasina, which are uniquely suited to our climate and soil. These grapes produce wines with distinctive character that you won't find anywhere else in the world.\nThe art of winemaking is not just about technique – it's about passion, dedication, and respect for the land. Every harvest season brings new challenges and opportunities to create something truly special.",
             "category": "Winemaking"
         },
-        "readMore": "Read More"
+        "readMore": "Read More",
+        "notFound": "Post not found"
     },
     "homeCta": {
         "title": "Ready to Experience Our Wines?",
@@ -152,6 +153,7 @@
         }
     },
     "common": {
-        "toggleLanguage": "Toggle language"
+        "toggleLanguage": "Toggle language",
+        "backToHome": "Back to Home"
     }
 }

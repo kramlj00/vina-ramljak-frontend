@@ -26,3 +26,7 @@ export const blogPosts = (t: TFunction) => [
     author: "Vinum Bibens",
   },
 ];
+
+export const getBlogPost = (t: TFunction, id: string) => {
+  return blogPosts(t).find((post) => post.id === id);
+};
