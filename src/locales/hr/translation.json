@@ -42,6 +42,17 @@
         "description": "Vizualni put kroz naš vinograd i vina",
         "ourVineyard": "Naš Vinograd"
     },
+    "blog": {
+        "title": "Blog",
+        "description": "Priče i savjeti iz Vinum Bibens",
+        "post1": {
+            "title": "Umjetnost hrvatskog vinarstva",
+            "excerpt": "Otkrijte stoljetne tradicije i moderne tehnike koje čine hrvatska vina jedinstvenim...",
+            "content": "Hrvatsko vinarstvo je prekrasan spoj drevnih tradicija i moderne inovacije. Stoljećima su naši preci uzgajali grožđe na ovoj blagoslovljenoj zemlji, razvijajući tehnike koje su prenosili s koljena na koljeno.\nJedinstveni teritorij Hrvatske, s mediteranskom klimom i raznolikim sastavom tla, stvara idealne uvjete za proizvodnju iznimnih vina.\nOd obalnih područja do unutrašnjih dolina, svako područje daje svoj vlastiti karakter našim vinima. U Vinum Bibens poštujemo te tradicije dok prihvaćamo moderne tehnike vinarstva. Naš proces odležavanja u hrastovim bačvama, fermentacija s kontroliranom temperaturom i pažljiv odabir grožđa osiguravaju da svaka boca predstavlja najbolje od oba svijeta.\nRadimo s autohtonim hrvatskim sortama grožđa poput Plavine i Lasine, koje su jedinstveno prilagođene našoj klimi i tlu. Ovo grožđe proizvodi vina s posebnim karakterom koje nećete naći nigdje drugdje na svijetu.\nUmjetnost vinarstva nije samo tehnika – to je strast, predanost i poštovanje prema zemlji. Svaka sezona berbe donosi nove izazove i prilike za stvaranje nečeg doista posebnog.",
+            "category": "Vinarstvo"
+        },
+        "readMore": "Saznaj više"
+    },
     "homeCta": {
         "title": "Spremni za iskustvo naših vina?",
         "description": "Posjetite naše vinarstvo ili naručite online i otkrijte izuzetan okus Vinum Bibens",

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { GalleryCategory, getGalleryCategories } from "../utils";
 import { useTranslation } from "react-i18next";
 import GalleryModal from "./modals/gallery-modal";
+import SectionTitle from "@/components/section-title";
 
 const Gallery = () => {
   const { t } = useTranslation();
@@ -17,14 +18,10 @@ const Gallery = () => {
     <>
       <section id={t("navigation.galleryAnchor")} className="py-20 bg-muted/20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-4 text-gradient-wine">
-              {t("gallery.title")}
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              {t("gallery.description")}
-            </p>
-          </div>
+          <SectionTitle
+            title={t("gallery.title")}
+            description={t("gallery.description")}
+          />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {galleryCategories.map((category) => (
