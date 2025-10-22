@@ -54,6 +54,15 @@
         "readMore": "Read More",
         "notFound": "Post not found"
     },
+    "contact": {
+        "title": "Contact Us",
+        "description": "Visit us or get in touch",
+        "getInTouch": "Get in Touch",
+        "address": "Address",
+        "phone": "Phone",
+        "region": "Dalmatia Region",
+        "croatia": "Croatia"
+    },
     "homeCta": {
         "title": "Ready to Experience Our Wines?",
         "description": "Visit our winery or order online to discover the exceptional taste of Vinum Bibens",

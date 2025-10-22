@@ -54,6 +54,15 @@
         "readMore": "Saznaj više",
         "notFound": "Post nije pronađen"
     },
+    "contact": {
+        "title": "Kontaktirajte nas",
+        "description": "Posjetite nas ili nas kontaktirajte",
+        "getInTouch": "Kontaktirajte nas",
+        "address": "Adresa",
+        "phone": "Telefon",
+        "region": "Dalmacija",
+        "croatia": "Hrvatska"
+    },
     "homeCta": {
         "title": "Spremni za iskustvo naših vina?",
         "description": "Posjetite naše vinarstvo ili naručite online i otkrijte izuzetan okus Vinum Bibens",

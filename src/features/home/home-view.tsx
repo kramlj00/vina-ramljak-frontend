@@ -1,5 +1,6 @@
 import AboutUs from "./components/about-us";
 import Blog from "./components/blog";
+import Contact from "./components/contact";
 import Gallery from "./components/gallery";
 import Hero from "./components/hero";
 import HomeCta from "./components/home-cta";
@@ -13,6 +14,7 @@ const HomeView = () => {
       <AboutUs />
       <Gallery />
       <Blog />
+      <Contact />
       <HomeCta />
     </main>
   );
