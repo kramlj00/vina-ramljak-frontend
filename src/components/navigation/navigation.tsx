@@ -21,9 +21,9 @@ const Navigation = ({ cartItemsCount = 0 }: IProps) => {
   const navLinks = [
     { path: "", label: t("navigation.home") },
     { path: t("navigation.winesAnchor"), label: t("navigation.wines") },
+    { path: t("navigation.aboutAnchor"), label: t("navigation.about") },
     { path: t("navigation.galleryAnchor"), label: t("navigation.gallery") },
     { path: t("navigation.blogAnchor"), label: t("navigation.blog") },
-    { path: t("navigation.aboutAnchor"), label: t("navigation.about") },
     { path: t("navigation.contactAnchor"), label: t("navigation.contact") },
   ];
 
