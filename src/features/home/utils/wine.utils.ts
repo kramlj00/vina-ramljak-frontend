@@ -16,7 +16,6 @@ export interface Wine {
 }
 
 export const getWines = (t: TFunction): Wine[] => {
-  console.log(t("wines.merlot.tastingNotes"));
   return [
     {
       id: "rose",

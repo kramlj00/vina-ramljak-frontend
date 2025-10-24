@@ -83,10 +83,10 @@
             },
             "social": {
                 "title": "Zapratite nas"
-            },
-            "copyright": {
-                "allRightsReserved": "Sva prava zadržana."
             }
+        },
+        "copyright": {
+            "allRightsReserved": "Sva prava zadržana."
         }
     },
     "wine": {
@@ -134,9 +134,45 @@
         "accept": "Prihvaćam",
         "decline": "Odbijam"
     },
+    "cart": {
+        "title": "Vaša košarica",
+        "empty": {
+            "title": "Vaša košarica je prazna",
+            "description": "Dodajte neka vina u vašu košaricu kako biste započeli",
+            "button": "Pregledaj vina"
+        },
+        "clearCart": "Isprazni košaricu",
+        "checkout": "Naruči",
+        "secureCheckout": "Sigurna naplata putem Stripe",
+        "summary": {
+            "title": "Sažetak narudžbe",
+            "subtotal": "Međuzbroj",
+            "shipping": "Dostava",
+            "total": "Ukupno",
+            "free": "Besplatno"
+        }
+    },
+    "checkout": {
+        "processing": "Obrađujem...",
+        "error": "Greška pri obradi plaćanja. Molimo pokušajte ponovno.",
+        "success": {
+            "title": "Uspješna kupnja!",
+            "description": "Hvala vam na narudžbi. Vaša narudžba je uspješno primljena.",
+            "orderNumber": "Broj narudžbe:",
+            "emailConfirmation": "Poslali smo vam potvrdu na email.",
+            "backToHome": "Povratak na početnu"
+        },
+        "cancel": {
+            "title": "Narudžba otkazana",
+            "description": "Vaša narudžba je otkazana. Košarica je sačuvana i možete nastaviti s kupnjom.",
+            "backToCart": "Povratak u košaricu",
+            "backToHome": "Povratak na početnu"
+        }
+    },
     "common": {
         "toggleLanguage": "Promijeni jezik",
         "backToHome": "Povratak na početnu stranicu",
-        "addToCart": "Dodaj u košaricu"
+        "addToCart": "Dodaj u košaricu",
+        "continueShopping": "Nastavi kupovati"
     }
 }

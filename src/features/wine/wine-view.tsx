@@ -7,12 +7,20 @@ import { useMemo } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ShoppingCart, WineIcon } from "lucide-react";
+import { useCart } from "@/context/cart-context";
 
 const WineView = () => {
   const { t } = useTranslation();
   const { id } = useParams<{ id: string }>();
+  const { addToCart } = useCart();
 
   const wine = useMemo(() => getWine(t, id ?? ""), [t, id]);
+
+  const handleAddToCart = () => {
+    if (wine) {
+      addToCart(wine);
+    }
+  };
 
   if (!wine) {
     return (
@@ -126,7 +134,11 @@ const WineView = () => {
               </ul>
             </div>
 
-            <Button size="lg" className="w-full bg-primary hover:bg-primary/90">
+            <Button
+              size="lg"
+              className="w-full bg-primary hover:bg-primary/90"
+              onClick={handleAddToCart}
+            >
               <ShoppingCart className="mr-2 h-5 w-5" />
               {t("common.addToCart")}
             </Button>
