@@ -1,151 +1,154 @@
 {
-    "navigation": {
-        "home": "Home",
-        "wines": "Wines",
-        "winesAnchor": "wines",
-        "gallery": "Gallery",
-        "galleryAnchor": "gallery",
-        "blog": "Blog",
-        "blogAnchor": "blog",
-        "about": "About",
-        "aboutAnchor": "about",
-        "contact": "Contact",
-        "contactAnchor": "contact"
+  "navigation": {
+    "home": "Home",
+    "wines": "Wines",
+    "winesAnchor": "wines",
+    "gallery": "Gallery",
+    "galleryAnchor": "gallery",
+    "blog": "Blog",
+    "blogAnchor": "blog",
+    "about": "About",
+    "aboutAnchor": "about",
+    "contact": "Contact",
+    "contactAnchor": "contact"
+  },
+  "hero": {
+    "title": "Premium Croatian wines crafted with passion and tradition",
+    "buttonExplore": "Explore Our Wines",
+    "buttonOurStory": "Our Story"
+  },
+  "grapes": {
+    "plavina": "Plavina",
+    "lasin": "Lasin",
+    "merlot": "Merlot"
+  },
+  "about": {
+    "title": "About Us",
+    "description": "A story of passion, tradition, and excellence",
+    "ourStory": "Our Story",
+    "story1": "Vinum Bibens was founded with a simple yet profound vision: to create wines that capture the essence of Croatia's rich viticultural heritage while embracing innovation and excellence.",
+    "story2": "Nestled in the heart of Croatia's wine country, our vineyards benefit from centuries of winemaking tradition and a unique microclimate that imparts distinctive character to our wines.",
+    "quality": "Quality",
+    "qualityDescription": "We never compromise on quality, from grape selection to bottling",
+    "tradition": "Tradition",
+    "traditionDescription": "Honoring centuries-old winemaking techniques and indigenous grape varieties",
+    "innovation": "Innovation",
+    "innovationDescription": "Embracing modern winemaking techniques to create exceptional wines",
+    "terroir": "Terroir",
+    "terroirDescription": "Respecting and showcasing our unique Croatian terroir"
+  },
+  "gallery": {
+    "title": "Gallery",
+    "description": "A visual journey through our vineyard and wines",
+    "ourVineyard": "Our Vineyard"
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Stories and insights from Vinum Bibens",
+    "post1": {
+      "title": "The Art of Croatian Winemaking",
+      "excerpt": "Discover the centuries-old traditions and modern techniques that make Croatian wines unique...",
+      "content": "Croatian winemaking is a beautiful blend of ancient traditions and modern innovation. For centuries, our ancestors have cultivated grapes in this blessed land, developing techniques that have been passed down through generations.\nThe unique terroir of Croatia, with its Mediterranean climate and diverse soil compositions, creates ideal conditions for producing exceptional wines. From the coastal regions to the inland valleys, each area contributes its own character to our wines.\nAt Vinum Bibens, we honor these traditions while embracing modern winemaking techniques. Our oak barrel aging process, temperature-controlled fermentation, and careful grape selection ensure that every bottle represents the best of both worlds.\nWe work with indigenous Croatian grape varieties like Plavina and Lasina, which are uniquely suited to our climate and soil. These grapes produce wines with distinctive character that you won't find anywhere else in the world.\nThe art of winemaking is not just about technique – it's about passion, dedication, and respect for the land. Every harvest season brings new challenges and opportunities to create something truly special.",
+      "category": "Winemaking"
     },
-    "hero": {
-        "title": "Premium Croatian wines crafted with passion and tradition",
-        "buttonExplore": "Explore Our Wines",
-        "buttonOurStory": "Our Story"
+    "readMore": "Read More",
+    "notFound": "Post not found"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Visit us or get in touch",
+    "getInTouch": "Get in Touch",
+    "address": "Address",
+    "phone": "Phone",
+    "region": "Dalmatia Region",
+    "croatia": "Croatia"
+  },
+  "homeCta": {
+    "title": "Ready to Experience Our Wines?",
+    "description": "Visit our winery or order online to discover the exceptional taste of Vinum Bibens",
+    "contact": "Contact Us",
+    "shop": "Shop Now"
+  },
+  "footer": {
+    "title": "Premium Croatian wines crafted with passion and tradition.",
+    "quickLinks": {
+      "title": "Quick Links",
+      "wines": "Our Wines",
+      "about": "About Us",
+      "blog": "Blog",
+      "contact": "Contact Us",
+      "contactInfo": {
+        "title": "Contact Info",
+        "country": "Croatia"
+      },
+      "social": {
+        "title": "Follow Us"
+      }
     },
-    "grapes": {
-        "plavina": "Plavina",
-        "lasin": "Lasin",
-        "merlot": "Merlot"
+    "copyright": {
+      "allRightsReserved": "All rights reserved."
     },
-    "about": {
-        "title": "About Us",
-        "description": "A story of passion, tradition, and excellence",
-        "ourStory": "Our Story",
-        "story1": "Vinum Bibens was founded with a simple yet profound vision: to create wines that capture the essence of Croatia's rich viticultural heritage while embracing innovation and excellence.",
-        "story2": "Nestled in the heart of Croatia's wine country, our vineyards benefit from centuries of winemaking tradition and a unique microclimate that imparts distinctive character to our wines.",
-        "quality": "Quality",
-        "qualityDescription": "We never compromise on quality, from grape selection to bottling",
-        "tradition": "Tradition",
-        "traditionDescription": "Honoring centuries-old winemaking techniques and indigenous grape varieties",
-        "innovation": "Innovation",
-        "innovationDescription": "Embracing modern winemaking techniques to create exceptional wines",
-        "terroir": "Terroir",
-        "terroirDescription": "Respecting and showcasing our unique Croatian terroir"
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "backToTop": "Back to Top"
+  },
+  "wine": {
+    "notFound": "Wine not found",
+    "vintage": "Vintage",
+    "alcohol": "Alcohol",
+    "grapes": "Grapes",
+    "tastingNotes": "Tasting Notes",
+    "foodPairing": "Food Pairing",
+    "perBottle": "per bottle"
+  },
+  "wines": {
+    "title": "Our Collection",
+    "description": "Discover our carefully crafted selection of premium Croatian wines",
+    "details": "Details",
+    "add": "Add",
+    "rose": {
+      "name": "Vinum Bibens Rosé",
+      "type": "Rosé Wine",
+      "description": "Elegant Croatian rosé with delicate fruit notes and refreshing acidity.",
+      "fullDescription": "Our Rosé is a beautiful expression of Croatian winemaking tradition. With its delicate salmon-pink color and refined character, this wine captures the essence of summer in every glass. The careful selection of grapes and gentle pressing create a wine that is both elegant and refreshing.",
+      "tastingNotes": "Fresh strawberry and watermelon, Delicate floral notes, Crisp citrus finish, Mineral undertones",
+      "foodPairing": "Grilled seafood, Mediterranean salads, Light pasta dishes, Soft cheeses"
     },
-    "gallery": {
-        "title": "Gallery",
-        "description": "A visual journey through our vineyard and wines",
-        "ourVineyard": "Our Vineyard"
+    "crno": {
+      "name": "Vinum Bibens Crno",
+      "type": "Red Blend",
+      "description": "Our signature blend of Plavina, Lasina, and Merlot grapes creating a unique Croatian character.",
+      "fullDescription": "Crno represents the pinnacle of our winemaking expertise. This distinctive blend combines indigenous Croatian varieties Plavina and Lasina with the international Merlot, creating a wine that honors tradition while embracing modernity. Aged in oak barrels, it develops complex layers of flavor that unfold with each sip.",
+      "tastingNotes": "Dark cherry and blackberry, Hints of Mediterranean herbs, Smooth tannins, Oak and vanilla finish",
+      "foodPairing": "Grilled red meats, Aged cheeses, Hearty stews, Dark chocolate"
     },
-    "blog": {
-        "title": "Blog",
-        "description": "Stories and insights from Vinum Bibens",
-        "post1": {
-            "title": "The Art of Croatian Winemaking",
-            "excerpt": "Discover the centuries-old traditions and modern techniques that make Croatian wines unique...",
-            "content": "Croatian winemaking is a beautiful blend of ancient traditions and modern innovation. For centuries, our ancestors have cultivated grapes in this blessed land, developing techniques that have been passed down through generations.\nThe unique terroir of Croatia, with its Mediterranean climate and diverse soil compositions, creates ideal conditions for producing exceptional wines. From the coastal regions to the inland valleys, each area contributes its own character to our wines.\nAt Vinum Bibens, we honor these traditions while embracing modern winemaking techniques. Our oak barrel aging process, temperature-controlled fermentation, and careful grape selection ensure that every bottle represents the best of both worlds.\nWe work with indigenous Croatian grape varieties like Plavina and Lasina, which are uniquely suited to our climate and soil. These grapes produce wines with distinctive character that you won't find anywhere else in the world.\nThe art of winemaking is not just about technique – it's about passion, dedication, and respect for the land. Every harvest season brings new challenges and opportunities to create something truly special.",
-            "category": "Winemaking"
-        },
-        "readMore": "Read More",
-        "notFound": "Post not found"
-    },
-    "contact": {
-        "title": "Contact Us",
-        "description": "Visit us or get in touch",
-        "getInTouch": "Get in Touch",
-        "address": "Address",
-        "phone": "Phone",
-        "region": "Dalmatia Region",
-        "croatia": "Croatia"
-    },
-    "homeCta": {
-        "title": "Ready to Experience Our Wines?",
-        "description": "Visit our winery or order online to discover the exceptional taste of Vinum Bibens",
-        "contact": "Contact Us",
-        "shop": "Shop Now"
-    },
-    "footer": {
-        "title": "Premium Croatian wines crafted with passion and tradition.",
-        "quickLinks": {
-            "title": "Quick Links",
-            "wines": "Our Wines",
-            "about": "About Us",
-            "blog": "Blog",
-            "contact": "Contact Us",
-            "contactInfo": {
-                "title": "Contact Info",
-                "country": "Croatia"
-            },
-            "social": {
-                "title": "Follow Us"
-            }
-        },
-        "copyright": {
-            "allRightsReserved": "All rights reserved."
-        }
-    },
-    "wine": {
-        "notFound": "Wine not found",
-        "vintage": "Vintage",
-        "alcohol": "Alcohol",
-        "grapes": "Grapes",
-        "tastingNotes": "Tasting Notes",
-        "foodPairing": "Food Pairing",
-        "perBottle": "per bottle"
-    },
-    "wines": {
-        "title": "Our Collection",
-        "description": "Discover our carefully crafted selection of premium Croatian wines",
-        "details": "Details",
-        "add": "Add",
-        "rose": {
-            "name": "Vinum Bibens Rosé",
-            "type": "Rosé Wine",
-            "description": "Elegant Croatian rosé with delicate fruit notes and refreshing acidity.",
-            "fullDescription": "Our Rosé is a beautiful expression of Croatian winemaking tradition. With its delicate salmon-pink color and refined character, this wine captures the essence of summer in every glass. The careful selection of grapes and gentle pressing create a wine that is both elegant and refreshing.",
-            "tastingNotes": "Fresh strawberry and watermelon, Delicate floral notes, Crisp citrus finish, Mineral undertones",
-            "foodPairing": "Grilled seafood, Mediterranean salads, Light pasta dishes, Soft cheeses"
-        },
-        "crno": {
-            "name": "Vinum Bibens Crno",
-            "type": "Red Blend",
-            "description": "Our signature blend of Plavina, Lasina, and Merlot grapes creating a unique Croatian character.",
-            "fullDescription": "Crno represents the pinnacle of our winemaking expertise. This distinctive blend combines indigenous Croatian varieties Plavina and Lasina with the international Merlot, creating a wine that honors tradition while embracing modernity. Aged in oak barrels, it develops complex layers of flavor that unfold with each sip.",
-            "tastingNotes": "Dark cherry and blackberry, Hints of Mediterranean herbs, Smooth tannins, Oak and vanilla finish",
-            "foodPairing": "Grilled red meats, Aged cheeses, Hearty stews, Dark chocolate"
-        },
-        "merlot": {
-            "name": "Vinum Bibens Merlot",
-            "type": "Merlot",
-            "description": "Rich and velvety Merlot with complex fruit flavors and elegant structure.",
-            "fullDescription": "Our Merlot showcases the potential of this noble variety in Croatia's unique terroir. Grown in carefully selected vineyards, these grapes benefit from ideal sun exposure and cool nights. The result is a wine with remarkable depth and elegance, combining power with refinement in perfect harmony.",
-            "tastingNotes": "Ripe plum and black cherry, Subtle spice notes, Silky smooth texture, Long, refined finish",
-            "foodPairing": "Roasted lamb, Mushroom risotto, Hard cheeses, Beef carpaccio"
-        }
-    },
-    "cookieBanner": {
-        "title": "Cookie Notice",
-        "description": "We use cookies to enhance your browsing experience and analyze our traffic. By clicking \"Accept\", you consent to our use of cookies.",
-        "accept": "Accept",
-        "decline": "Decline"
-    },
-    "cart": {
-        "title": "Shopping Cart",
-        "empty": {
-            "title": "Your cart is empty",
-            "description": "Add some wines to your cart to get started",
-            "button": "Browse Wines"
-        }
-    },
-    "common": {
-        "toggleLanguage": "Toggle language",
-        "backToHome": "Back to Home",
-        "addToCart": "Add to Cart",
-        "continueShopping": "Continue Shopping"
+    "merlot": {
+      "name": "Vinum Bibens Merlot",
+      "type": "Merlot",
+      "description": "Rich and velvety Merlot with complex fruit flavors and elegant structure.",
+      "fullDescription": "Our Merlot showcases the potential of this noble variety in Croatia's unique terroir. Grown in carefully selected vineyards, these grapes benefit from ideal sun exposure and cool nights. The result is a wine with remarkable depth and elegance, combining power with refinement in perfect harmony.",
+      "tastingNotes": "Ripe plum and black cherry, Subtle spice notes, Silky smooth texture, Long, refined finish",
+      "foodPairing": "Roasted lamb, Mushroom risotto, Hard cheeses, Beef carpaccio"
     }
+  },
+  "cookieBanner": {
+    "title": "Cookie Notice",
+    "description": "We use cookies to enhance your browsing experience and analyze our traffic. By clicking \"Accept\", you consent to our use of cookies.",
+    "accept": "Accept",
+    "decline": "Decline"
+  },
+  "cart": {
+    "title": "Shopping Cart",
+    "empty": {
+      "title": "Your cart is empty",
+      "description": "Add some wines to your cart to get started",
+      "button": "Browse Wines"
+    }
+  },
+  "common": {
+    "toggleLanguage": "Toggle language",
+    "backToHome": "Back to Home",
+    "addToCart": "Add to Cart",
+    "continueShopping": "Continue Shopping"
+  }
 }

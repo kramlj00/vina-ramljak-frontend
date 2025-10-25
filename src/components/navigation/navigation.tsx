@@ -100,8 +100,8 @@ const Navigation = ({ cartItemsCount = 0 }: IProps) => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass w-full">
-      <div className="flex items-center justify-between px-4 h-16">
+    <nav className="fixed top-0 left-0 right-0 z-50 glass w-full !border-none">
+      <div className="flex items-center justify-between px-4 h-16 border-b border-white/10">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2 no-underline">
           <h1 className="font-playfair text-2xl md:text-3xl font-bold text-gradient-wine">
