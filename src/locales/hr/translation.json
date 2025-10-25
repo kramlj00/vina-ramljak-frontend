@@ -89,8 +89,10 @@
       "allRightsReserved": "Sva prava zadržana."
     },
     "privacyPolicy": "Politika privatnosti",
-    "termsOfService": "Uvjeti korištenja",
     "backToTop": "Povratak na vrh"
+  },
+  "privacy": {
+    "title": "Politika privatnosti"
   },
   "wine": {
     "notFound": "Vino nije pronađeno",

@@ -89,8 +89,10 @@
       "allRightsReserved": "All rights reserved."
     },
     "privacyPolicy": "Privacy Policy",
-    "termsOfService": "Terms of Service",
     "backToTop": "Back to Top"
+  },
+  "privacy": {
+    "title": "Privacy Policy"
   },
   "wine": {
     "notFound": "Wine not found",

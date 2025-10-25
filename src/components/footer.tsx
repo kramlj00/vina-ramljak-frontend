@@ -18,8 +18,7 @@ const Footer = () => {
         <div className="py-8 flex justify-center">
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="group flex items-center gap-2 text-white/70 hover:text-white transition-colors duration-300"
-          >
+            className="group flex items-center gap-2 text-white/70 hover:text-white transition-colors duration-300">
             <span className="text-sm">{t('footer.backToTop')}</span>
             <span className="w-8 h-8 rounded-full animate-arrow-bounce shrink-0 bg-white/10 flex items-center justify-center group-hover:bg-primary transition-colors">
               <ArrowUp className="w-4 h-4" />
@@ -31,8 +30,7 @@ const Footer = () => {
           <div className="md:space-y-4 space-y-2">
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="flex items-center space-x-2"
-            >
+              className="flex items-center space-x-2">
               <Wine className="h-6 w-6 text-primary" />
               <h3 className="font-playfair text-2xl font-bold text-gradient-wine">
                 {config.metadata.name}
@@ -61,20 +59,11 @@ const Footer = () => {
           <p className="text-muted-foreground text-sm">
             © {currentYear} {config.metadata.name}. All rights reserved.
           </p>
-          <div className="flex gap-6">
-            <Link
-              href={`/#${t('navigation.privacyPolicyAnchor')}`}
-              className="text-muted-foreground hover:text-gradient-wine text-sm transition-all duration-300"
-            >
-              {t('footer.privacyPolicy')}
-            </Link>
-            <Link
-              href={`/#${t('navigation.termsOfServiceAnchor')}`}
-              className="text-muted-foreground hover:text-gradient-wine text-sm transition-all duration-300"
-            >
-              {t('footer.termsOfService')}
-            </Link>
-          </div>
+          <Link
+            href="/privacy"
+            className="text-muted-foreground hover:text-gradient-wine text-sm transition-all duration-300">
+            {t('footer.privacyPolicy')}
+          </Link>
         </div>
       </div>
     </footer>
