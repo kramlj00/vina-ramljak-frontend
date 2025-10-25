@@ -1,4 +1,4 @@
-import BlogPostView from "@/features/blog-post";
+import BlogPostView from '@/features/blog-post';
 
 const BlogPostPage = () => {
   return <BlogPostView />;

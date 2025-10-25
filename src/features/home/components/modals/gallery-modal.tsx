@@ -1,18 +1,20 @@
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
-import { GalleryCategory } from "../../utils";
+import { Dispatch, SetStateAction } from 'react';
+
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel";
-import { Dispatch, SetStateAction } from "react";
+} from '@/components/ui/carousel';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
+
+import { GalleryCategory } from '../../utils';
 
 interface IProps {
   selectedCategory: GalleryCategory | null;

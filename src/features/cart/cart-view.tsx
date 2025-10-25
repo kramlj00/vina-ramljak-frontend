@@ -1,10 +1,13 @@
-"use client";
+'use client';
 
-import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
-import Link from "next/link";
-import EmptyCart from "./components/empty-cart";
-import { useTranslation } from "react-i18next";
+import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
+
+import { ArrowLeft } from 'lucide-react';
+
+import { Button } from '@/components/ui/button';
+
+import EmptyCart from './components/empty-cart';
 
 const CartView = () => {
   const { t } = useTranslation();
@@ -14,15 +17,15 @@ const CartView = () => {
   return (
     <div className="pt-32 pb-20">
       <div className="container mx-auto px-4">
-        <Link href="/wines">
+        <Link href={`/#${t('navigation.winesAnchor')}`}>
           <Button variant="ghost" className="mb-8">
             <ArrowLeft className="mr-2 h-4 w-4" />
-            {t("common.continueShopping")}
+            {t('common.continueShopping')}
           </Button>
         </Link>
 
         <h1 className="font-playfair text-5xl md:text-5xl font-bold md:h-[50px] mb-8 text-gradient-wine">
-          {t("cart.title")}
+          {t('cart.title')}
         </h1>
 
         {!cartItems.length ? (

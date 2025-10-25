@@ -8,8 +8,8 @@ export interface IConfig {
 
 export const config: IConfig = {
   metadata: {
-    name: process.env.NEXT_PUBLIC_APP_NAME ?? "",
-    description: process.env.NEXT_PUBLIC_APP_DESCRIPTION ?? "",
-    url: process.env.NEXT_PUBLIC_APP_URL ?? "",
+    name: process.env.NEXT_PUBLIC_APP_NAME ?? '',
+    description: process.env.NEXT_PUBLIC_APP_DESCRIPTION ?? '',
+    url: process.env.NEXT_PUBLIC_APP_URL ?? '',
   },
 };
