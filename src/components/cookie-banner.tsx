@@ -1,8 +1,9 @@
-"use client";
+'use client';
 
-import { useState, useEffect } from "react";
-import { Button } from "./ui/button";
-import { useTranslation } from "react-i18next";
+import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+
+import { Button } from './ui/button';
 
 const CookieBanner = () => {
   const { t } = useTranslation();
@@ -10,19 +11,19 @@ const CookieBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const consent = localStorage.getItem("cookie-consent");
+    const consent = localStorage.getItem('cookie-consent');
     if (!consent) {
       setIsVisible(true);
     }
   }, []);
 
   const acceptCookies = () => {
-    localStorage.setItem("cookie-consent", "accepted");
+    localStorage.setItem('cookie-consent', 'accepted');
     setIsVisible(false);
   };
 
   const declineCookies = () => {
-    localStorage.setItem("cookie-consent", "declined");
+    localStorage.setItem('cookie-consent', 'declined');
     setIsVisible(false);
   };
 
@@ -35,10 +36,10 @@ const CookieBanner = () => {
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
             <div className="flex-1">
               <h3 className="font-playfair font-semibold text-lg mb-2">
-                {t("cookieBanner.title")}
+                {t('cookieBanner.title')}
               </h3>
               <p className="text-sm text-muted-foreground">
-                {t("cookieBanner.description")}
+                {t('cookieBanner.description')}
               </p>
             </div>
             <div className="flex items-center space-x-3">
@@ -48,14 +49,14 @@ const CookieBanner = () => {
                 onClick={declineCookies}
                 className="border-border/50"
               >
-                {t("cookieBanner.decline")}
+                {t('cookieBanner.decline')}
               </Button>
               <Button
                 size="sm"
                 onClick={acceptCookies}
                 className="bg-primary hover:bg-primary/90"
               >
-                {t("cookieBanner.accept")}
+                {t('cookieBanner.accept')}
               </Button>
             </div>
           </div>

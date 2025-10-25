@@ -1,4 +1,4 @@
-import HomeView from "@/features/home";
+import HomeView from '@/features/home';
 
 const HomePage = () => {
   return <HomeView />;

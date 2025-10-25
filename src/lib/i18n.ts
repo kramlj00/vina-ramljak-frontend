@@ -1,10 +1,10 @@
-import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
-import LanguageDetector from "i18next-browser-languagedetector";
+import { initReactI18next } from 'react-i18next';
 
+import translationEN from '@/locales/en/translation.json';
 // Import translation files
-import translationHR from "@/locales/hr/translation.json";
-import translationEN from "@/locales/en/translation.json";
+import translationHR from '@/locales/hr/translation.json';
+import i18n from 'i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
 
 const resources = {
   hr: {
@@ -20,13 +20,13 @@ i18n
   .use(initReactI18next) // Passes i18n down to react-i18next
   .init({
     resources,
-    fallbackLng: "hr", // Default language
+    fallbackLng: 'hr', // Default language
     interpolation: {
       escapeValue: false, // React already escapes by default
     },
     detection: {
-      order: ["localStorage", "navigator"],
-      caches: ["localStorage"],
+      order: ['localStorage', 'navigator'],
+      caches: ['localStorage'],
     },
   });
 

@@ -1,9 +1,11 @@
-"use client";
+'use client';
 
-import { useTranslation } from "react-i18next";
-import { getWines } from "../utils";
-import WineCard from "./wine-card";
-import SectionTitle from "@/components/section-title";
+import { useTranslation } from 'react-i18next';
+
+import SectionTitle from '@/components/section-title';
+
+import { getWines } from '../utils';
+import WineCard from './wine-card';
 
 const WineList = () => {
   const { t } = useTranslation();
@@ -11,11 +13,11 @@ const WineList = () => {
   const wines = getWines(t);
 
   return (
-    <section id={t("navigation.winesAnchor")} className="py-20">
+    <section id={t('navigation.winesAnchor')} className="py-20">
       <div className="container mx-auto px-4">
         <SectionTitle
-          title={t("wines.title")}
-          description={t("wines.description")}
+          title={t('wines.title')}
+          description={t('wines.description')}
         />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

@@ -1,14 +1,16 @@
-"use client";
+'use client';
 
-import { useEffect } from "react";
-import AboutUs from "./components/about-us";
-import Blog from "./components/blog";
-import Contact from "./components/contact";
-import Gallery from "./components/gallery";
-import Hero from "./components/hero";
-import HomeCta from "./components/home-cta";
-import WineList from "./components/wine-list";
-import Lenis from "lenis";
+import { useEffect } from 'react';
+
+import Lenis from 'lenis';
+
+import AboutUs from './components/about-us';
+import Blog from './components/blog';
+import Contact from './components/contact';
+import Gallery from './components/gallery';
+import Hero from './components/hero';
+import HomeCta from './components/home-cta';
+import WineList from './components/wine-list';
 
 const HomeView = () => {
   useEffect(() => {

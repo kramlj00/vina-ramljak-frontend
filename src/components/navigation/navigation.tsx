@@ -1,19 +1,22 @@
-"use client";
+'use client';
 
-import { useEffect, useMemo, useState } from "react";
-import { ShoppingCart, Menu, Globe } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useEffect, useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+
+import { config } from '@/config';
+import { ShoppingCart, Menu, Globe } from 'lucide-react';
+
+import { cn } from '@/lib/utils';
+
+import { Button } from '@/components/ui/button';
 import {
   Sheet,
   SheetContent,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet";
-import Link from "next/link";
-import { useTranslation } from "react-i18next";
-import { config } from "@/config";
-import { usePathname } from "next/navigation";
-import { cn } from "@/lib/utils";
+} from '@/components/ui/sheet';
 
 interface IProps {
   cartItemsCount?: number;
@@ -22,35 +25,35 @@ interface IProps {
 const Navigation = ({ cartItemsCount = 0 }: IProps) => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
-  const [active, setActive] = useState("");
+  const [active, setActive] = useState('');
 
   const { t, i18n } = useTranslation();
 
   const navLinks = useMemo(
     () => [
-      { path: t("navigation.winesAnchor"), label: t("navigation.wines") },
-      { path: t("navigation.aboutAnchor"), label: t("navigation.about") },
-      { path: t("navigation.galleryAnchor"), label: t("navigation.gallery") },
-      { path: t("navigation.blogAnchor"), label: t("navigation.blog") },
-      { path: t("navigation.contactAnchor"), label: t("navigation.contact") },
+      { path: t('navigation.winesAnchor'), label: t('navigation.wines') },
+      { path: t('navigation.aboutAnchor'), label: t('navigation.about') },
+      { path: t('navigation.galleryAnchor'), label: t('navigation.gallery') },
+      { path: t('navigation.blogAnchor'), label: t('navigation.blog') },
+      { path: t('navigation.contactAnchor'), label: t('navigation.contact') },
     ],
-    [t]
+    [t],
   );
 
   const toggleLanguage = () => {
-    const newLang = i18n.language === "hr" ? "en" : "hr";
+    const newLang = i18n.language === 'hr' ? 'en' : 'hr';
     i18n.changeLanguage(newLang);
   };
 
   // Handle initial scroll to hash on page load
   useEffect(() => {
     const hash = window.location.hash.slice(1);
-    if (hash && pathname === "/") {
+    if (hash && pathname === '/') {
       // Wait for DOM to be ready
       setTimeout(() => {
         const element = document.getElementById(hash);
         if (element) {
-          element.scrollIntoView({ behavior: "smooth", block: "start" });
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       }, 100);
     }
@@ -59,24 +62,24 @@ const Navigation = ({ cartItemsCount = 0 }: IProps) => {
   useEffect(() => {
     setActive(window.location.hash.slice(1) || pathname);
 
-    const isHomePage = pathname === "/";
+    const isHomePage = pathname === '/';
     if (isHomePage) {
       const observer = new IntersectionObserver(
         (entries) => {
           const intersectingSection = entries.find(
-            (entry) => entry.isIntersecting
+            (entry) => entry.isIntersecting,
           );
           if (intersectingSection) {
             const id = intersectingSection.target.id;
             setActive(id);
-            window.history.replaceState(null, "", `#${id}`);
+            window.history.replaceState(null, '', `#${id}`);
           } else {
-            setActive("");
+            setActive('');
           }
         },
         {
-          rootMargin: "-50% 0px -50% 0px",
-        }
+          rootMargin: '-50% 0px -50% 0px',
+        },
       );
 
       navLinks.forEach(({ path }) => {
@@ -91,7 +94,7 @@ const Navigation = ({ cartItemsCount = 0 }: IProps) => {
   }, [pathname, navLinks]);
 
   const handleLinkClick = (href: string) => {
-    if (pathname !== "/") {
+    if (pathname !== '/') {
       window.location.href = `/#${href}`;
       return;
     }
@@ -115,8 +118,8 @@ const Navigation = ({ cartItemsCount = 0 }: IProps) => {
             <li
               key={link.path}
               className={cn(
-                "hover:text-white label-large font-semibold cursor-pointer relative h-full flex items-center group transition-all duration-300",
-                active === link.path ? "text-white" : "text-white/80"
+                'hover:text-white label-large font-semibold cursor-pointer relative h-full flex items-center group transition-all duration-300',
+                active === link.path ? 'text-white' : 'text-white/80',
               )}
               onClick={() => handleLinkClick(link.path)}
             >
@@ -124,8 +127,8 @@ const Navigation = ({ cartItemsCount = 0 }: IProps) => {
 
               <div
                 className={cn(
-                  "absolute bottom-0 left-0 h-1 rounded-full bg-accent mb-[-1px] w-0 opacity-0 group-hover:w-full group-hover:opacity-100 transition-all duration-700",
-                  active === link.path && "w-full opacity-100"
+                  'absolute bottom-0 left-0 h-1 rounded-full bg-accent mb-[-1px] w-0 opacity-0 group-hover:w-full group-hover:opacity-100 transition-all duration-700',
+                  active === link.path && 'w-full opacity-100',
                 )}
               />
             </li>
@@ -138,11 +141,11 @@ const Navigation = ({ cartItemsCount = 0 }: IProps) => {
             variant="ghost"
             onClick={toggleLanguage}
             className="hover:bg-white/10 hover:text-white py-1 px-2"
-            aria-label={t("common.toggleLanguage")}
+            aria-label={t('common.toggleLanguage')}
           >
             <Globe className="h-5 w-5" />
             <span className="ml-1 text-xs">
-              {i18n.language.split("-")[0].toUpperCase()}
+              {i18n.language.split('-')[0].toUpperCase()}
             </span>
           </Button>
 
@@ -179,18 +182,18 @@ const Navigation = ({ cartItemsCount = 0 }: IProps) => {
                   <li
                     key={link.path}
                     className={cn(
-                      "relative cursor-pointer font-semibold group",
+                      'relative cursor-pointer font-semibold group',
                       active === link.path
-                        ? "text-white font-bold"
-                        : "text-white/80"
+                        ? 'text-white font-bold'
+                        : 'text-white/80',
                     )}
                     onClick={() => handleLinkClick(link.path)}
                   >
                     <a href={`#${link.path}`}>{link.label}</a>
                     <div
                       className={cn(
-                        "absolute bottom-[-8px] left-0 h-1 w-0 rounded-full bg-accent opacity-0 group-hover:w-full group-hover:opacity-100 transition-all duration-700",
-                        active === link.path && "w-full opacity-100"
+                        'absolute bottom-[-8px] left-0 h-1 w-0 rounded-full bg-accent opacity-0 group-hover:w-full group-hover:opacity-100 transition-all duration-700',
+                        active === link.path && 'w-full opacity-100',
                       )}
                     />
                   </li>

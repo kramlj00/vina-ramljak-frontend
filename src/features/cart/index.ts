@@ -1,3 +1,3 @@
-import CartView from "./cart-view";
+import CartView from './cart-view';
 
 export default CartView;

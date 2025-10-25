@@ -1,10 +1,12 @@
-"use client";
+'use client';
 
-import { Wine, ArrowRight } from "lucide-react";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { useTranslation } from "react-i18next";
-import { config } from "@/config";
+import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
+
+import { config } from '@/config';
+import { Wine, ArrowRight } from 'lucide-react';
+
+import { Button } from '@/components/ui/button';
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -25,25 +27,25 @@ const Hero = () => {
             {config.metadata.name}
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-foreground/90 font-inter">
-            {t("hero.title")}
+            {t('hero.title')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href={`#${t("navigation.winesAnchor")}`}>
+            <Link href={`#${t('navigation.winesAnchor')}`}>
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-lg"
               >
-                {t("hero.buttonExplore")}
+                {t('hero.buttonExplore')}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
-            <Link href={`#${t("navigation.aboutAnchor")}`}>
+            <Link href={`#${t('navigation.aboutAnchor')}`}>
               <Button
                 size="lg"
                 variant="outline"
                 className="text-lg border-border/50"
               >
-                {t("hero.buttonOurStory")}
+                {t('hero.buttonOurStory')}
               </Button>
             </Link>
           </div>

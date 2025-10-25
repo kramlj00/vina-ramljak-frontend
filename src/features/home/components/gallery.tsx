@@ -1,10 +1,12 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import { GalleryCategory, getGalleryCategories } from "../utils";
-import { useTranslation } from "react-i18next";
-import GalleryModal from "./modals/gallery-modal";
-import SectionTitle from "@/components/section-title";
+import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+
+import SectionTitle from '@/components/section-title';
+
+import { GalleryCategory, getGalleryCategories } from '../utils';
+import GalleryModal from './modals/gallery-modal';
 
 const Gallery = () => {
   const { t } = useTranslation();
@@ -16,11 +18,11 @@ const Gallery = () => {
 
   return (
     <>
-      <section id={t("navigation.galleryAnchor")} className="py-20 bg-muted/20">
+      <section id={t('navigation.galleryAnchor')} className="py-20 bg-muted/20">
         <div className="container mx-auto px-4">
           <SectionTitle
-            title={t("gallery.title")}
-            description={t("gallery.description")}
+            title={t('gallery.title')}
+            description={t('gallery.description')}
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

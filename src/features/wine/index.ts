@@ -1,3 +1,3 @@
-import WineView from "./wine-view";
+import WineView from './wine-view';
 
 export default WineView;

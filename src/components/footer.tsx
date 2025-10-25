@@ -1,10 +1,12 @@
-"use client";
+'use client';
 
-import { config } from "@/config";
-import { CONTACT_EMAIL, CONTACT_PHONE } from "@/lib/constants";
-import { Wine, Mail, Phone, MapPin, ArrowUp } from "lucide-react";
-import Link from "next/link";
-import { useTranslation } from "react-i18next";
+import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
+
+import { config } from '@/config';
+import { Wine, Mail, Phone, MapPin, ArrowUp } from 'lucide-react';
+
+import { CONTACT_EMAIL, CONTACT_PHONE } from '@/lib/constants';
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -15,10 +17,10 @@ const Footer = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="py-8 flex justify-center">
           <button
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="group flex items-center gap-2 text-white/70 hover:text-white transition-colors duration-300"
           >
-            <span className="text-sm">{t("footer.backToTop")}</span>
+            <span className="text-sm">{t('footer.backToTop')}</span>
             <span className="w-8 h-8 rounded-full animate-arrow-bounce shrink-0 bg-white/10 flex items-center justify-center group-hover:bg-primary transition-colors">
               <ArrowUp className="w-4 h-4" />
             </span>
@@ -28,7 +30,7 @@ const Footer = () => {
         <div className="py-12 border-t border-white/10 gap-8 flex md:flex-row flex-col md:items-center justify-between">
           <div className="md:space-y-4 space-y-2">
             <button
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className="flex items-center space-x-2"
             >
               <Wine className="h-6 w-6 text-primary" />
@@ -36,13 +38,13 @@ const Footer = () => {
                 {config.metadata.name}
               </h3>
             </button>
-            <p className="text-sm text-muted-foreground">{t("footer.title")}</p>
+            <p className="text-sm text-muted-foreground">{t('footer.title')}</p>
           </div>
 
           <ul className="space-y-3">
             <li className="flex items-center space-x-2 text-sm text-muted-foreground">
               <MapPin className="h-4 w-4 text-primary" />
-              <span>{t("footer.quickLinks.contactInfo.country")}</span>
+              <span>{t('footer.quickLinks.contactInfo.country')}</span>
             </li>
             <li className="flex items-center space-x-2 text-sm text-muted-foreground">
               <Phone className="h-4 w-4 text-primary" />
@@ -61,16 +63,16 @@ const Footer = () => {
           </p>
           <div className="flex gap-6">
             <Link
-              href={`/#${t("navigation.privacyPolicyAnchor")}`}
+              href={`/#${t('navigation.privacyPolicyAnchor')}`}
               className="text-muted-foreground hover:text-gradient-wine text-sm transition-all duration-300"
             >
-              {t("footer.privacyPolicy")}
+              {t('footer.privacyPolicy')}
             </Link>
             <Link
-              href={`/#${t("navigation.termsOfServiceAnchor")}`}
+              href={`/#${t('navigation.termsOfServiceAnchor')}`}
               className="text-muted-foreground hover:text-gradient-wine text-sm transition-all duration-300"
             >
-              {t("footer.termsOfService")}
+              {t('footer.termsOfService')}
             </Link>
           </div>
         </div>
