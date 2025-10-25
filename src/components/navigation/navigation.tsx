@@ -13,6 +13,7 @@ import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { config } from "@/config";
 import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 interface IProps {
   cartItemsCount?: number;
@@ -100,7 +101,7 @@ const Navigation = ({ cartItemsCount = 0 }: IProps) => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass w-full">
-      <div className="flex items-center justify-between px-4 py-3">
+      <div className="flex items-center justify-between px-4 h-16">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2 no-underline">
           <h1 className="font-playfair text-2xl md:text-3xl font-bold text-gradient-wine">
@@ -109,20 +110,27 @@ const Navigation = ({ cartItemsCount = 0 }: IProps) => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
+        <ul className="list-none hidden md:flex gap-10 h-full">
           {navLinks.map((link) => (
-            <Link
+            <li
               key={link.path}
-              href={`#${link.path}`}
+              className={cn(
+                "hover:text-white label-large font-semibold cursor-pointer relative h-full flex items-center group transition-all duration-300",
+                active === link.path ? "text-white" : "text-white/80"
+              )}
               onClick={() => handleLinkClick(link.path)}
-              className={`text-sm font-inter font-medium transition-colors hover:text-accent no-underline ${
-                active === link.path ? "text-accent" : "text-foreground"
-              }`}
             >
-              {link.label}
-            </Link>
+              <a href={`#${link.path}`}>{link.label}</a>
+
+              <div
+                className={cn(
+                  "absolute bottom-0 left-0 h-1 rounded-full bg-accent mb-[-1px] w-0 opacity-0 group-hover:w-full group-hover:opacity-100 transition-all duration-700",
+                  active === link.path && "w-full opacity-100"
+                )}
+              />
+            </li>
           ))}
-        </div>
+        </ul>
 
         {/* Right Side Actions */}
         <div className="flex items-center space-x-4">
@@ -159,7 +167,6 @@ const Navigation = ({ cartItemsCount = 0 }: IProps) => {
               <Button
                 variant="ghost"
                 size="icon"
-                // className="hover:bg-primary/10"
                 className="relative hover:bg-white/10 hover:text-white py-1 px-2"
               >
                 <Menu className="h-6 w-6" />
@@ -167,20 +174,28 @@ const Navigation = ({ cartItemsCount = 0 }: IProps) => {
             </SheetTrigger>
             <SheetTitle className="hidden"></SheetTitle>
             <SheetContent side="right" className="glass-strong w-[300px]">
-              <div className="flex flex-col space-y-6 mt-8">
+              <ul className="list-none flex mt-8 space-y-6 flex-col">
                 {navLinks.map((link) => (
-                  <Link
+                  <li
                     key={link.path}
-                    href={`#${link.path}`}
-                    onClick={() => setIsOpen(false)}
-                    className={`text-lg font-inter font-medium transition-colors hover:text-accent no-underline ${
-                      active === link.path ? "text-accent" : "text-foreground"
-                    }`}
+                    className={cn(
+                      "relative cursor-pointer font-semibold group",
+                      active === link.path
+                        ? "text-white font-bold"
+                        : "text-white/80"
+                    )}
+                    onClick={() => handleLinkClick(link.path)}
                   >
-                    {link.label}
-                  </Link>
+                    <a href={`#${link.path}`}>{link.label}</a>
+                    <div
+                      className={cn(
+                        "absolute bottom-[-8px] left-0 h-1 w-0 rounded-full bg-accent opacity-0 group-hover:w-full group-hover:opacity-100 transition-all duration-700",
+                        active === link.path && "w-full opacity-100"
+                      )}
+                    />
+                  </li>
                 ))}
-              </div>
+              </ul>
             </SheetContent>
           </Sheet>
         </div>
