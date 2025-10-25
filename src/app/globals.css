@@ -56,6 +56,11 @@ All colors MUST be HSL.
     );
     --gradient-gold: linear-gradient(135deg, hsl(45 90% 60%), hsl(35 85% 55%));
     --gradient-dark: linear-gradient(180deg, hsl(280 30% 8%), hsl(280 30% 5%));
+
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+    --font-inter: var(--font-inter);
+    --font-playfair: var(--font-playfair);
   }
 }
 
@@ -71,12 +76,7 @@ All colors MUST be HSL.
     min-height: 100vh;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  h1 {
     font-family: "Playfair Display", serif;
   }
 }
