@@ -3,7 +3,12 @@
 import { useEffect, useMemo, useState } from "react";
 import { ShoppingCart, Menu, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { config } from "@/config";
@@ -95,7 +100,7 @@ const Navigation = ({ cartItemsCount = 0 }: IProps) => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass w-full">
-      <div className="flex items-center justify-between h-20 px-4 py-4">
+      <div className="flex items-center justify-between px-4 py-3">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2 no-underline">
           <h1 className="font-playfair text-2xl md:text-3xl font-bold text-gradient-wine">
@@ -154,11 +159,13 @@ const Navigation = ({ cartItemsCount = 0 }: IProps) => {
               <Button
                 variant="ghost"
                 size="icon"
-                className="hover:bg-primary/10"
+                // className="hover:bg-primary/10"
+                className="relative hover:bg-white/10 hover:text-white py-1 px-2"
               >
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
+            <SheetTitle className="hidden"></SheetTitle>
             <SheetContent side="right" className="glass-strong w-[300px]">
               <div className="flex flex-col space-y-6 mt-8">
                 {navLinks.map((link) => (
