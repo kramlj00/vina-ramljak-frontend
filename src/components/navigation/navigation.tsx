@@ -6,6 +6,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { config } from '@/config';
+import { useCart } from '@/context';
 import { ShoppingCart, Menu, Globe } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
@@ -18,11 +19,8 @@ import {
   SheetTrigger,
 } from '@/components/ui/sheet';
 
-interface IProps {
-  cartItemsCount?: number;
-}
-
-const Navigation = ({ cartItemsCount = 0 }: IProps) => {
+const Navigation = () => {
+  const { totalItems } = useCart();
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [active, setActive] = useState('');
@@ -121,8 +119,7 @@ const Navigation = ({ cartItemsCount = 0 }: IProps) => {
                 'hover:text-white label-large font-semibold cursor-pointer relative h-full flex items-center group transition-all duration-300',
                 active === link.path ? 'text-white' : 'text-white/80',
               )}
-              onClick={() => handleLinkClick(link.path)}
-            >
+              onClick={() => handleLinkClick(link.path)}>
               <a href={`#${link.path}`}>{link.label}</a>
 
               <div
@@ -141,8 +138,7 @@ const Navigation = ({ cartItemsCount = 0 }: IProps) => {
             variant="ghost"
             onClick={toggleLanguage}
             className="hover:bg-white/10 hover:text-white py-1 px-2"
-            aria-label={t('common.toggleLanguage')}
-          >
+            aria-label={t('common.toggleLanguage')}>
             <Globe className="h-5 w-5" />
             <span className="ml-1 text-xs">
               {i18n.language.split('-')[0].toUpperCase()}
@@ -153,12 +149,11 @@ const Navigation = ({ cartItemsCount = 0 }: IProps) => {
             <Button
               variant="ghost"
               size="icon"
-              className="relative hover:bg-white/10 hover:text-white py-1 px-2"
-            >
+              className="relative hover:bg-white/10 hover:text-white py-1 px-2">
               <ShoppingCart className="h-5 w-5" />
-              {cartItemsCount > 0 && (
+              {totalItems > 0 && (
                 <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold">
-                  {cartItemsCount}
+                  {totalItems}
                 </span>
               )}
             </Button>
@@ -170,8 +165,7 @@ const Navigation = ({ cartItemsCount = 0 }: IProps) => {
               <Button
                 variant="ghost"
                 size="icon"
-                className="relative hover:bg-white/10 hover:text-white py-1 px-2"
-              >
+                className="relative hover:bg-white/10 hover:text-white py-1 px-2">
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
@@ -187,8 +181,7 @@ const Navigation = ({ cartItemsCount = 0 }: IProps) => {
                         ? 'text-white font-bold'
                         : 'text-white/80',
                     )}
-                    onClick={() => handleLinkClick(link.path)}
-                  >
+                    onClick={() => handleLinkClick(link.path)}>
                     <a href={`#${link.path}`}>{link.label}</a>
                     <div
                       className={cn(

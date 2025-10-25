@@ -1,9 +1,12 @@
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 
+import { useCart } from '@/context';
 import { ShoppingCart } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
+
+import { Wine } from '../utils';
 
 interface WineCardProps {
   id: string;
@@ -12,17 +15,50 @@ interface WineCardProps {
   price: number;
   imageSrc: string;
   description: string;
+  fullDescription?: string;
+  alcohol?: string;
+  vintage?: string;
+  grapes?: string[];
+  tastingNotes?: string[];
+  foodPairing?: string[];
 }
 
-const WineCard = ({
-  id,
-  name,
-  type,
-  price,
-  imageSrc,
-  description,
-}: WineCardProps) => {
+const WineCard = (
+  {
+    id,
+    name,
+    type,
+    price,
+    imageSrc,
+    description,
+    fullDescription = '',
+    alcohol = '',
+    vintage = '',
+    grapes = [],
+    tastingNotes = [],
+    foodPairing = [],
+  }: WineCardProps,
+) => {
   const { t } = useTranslation();
+  const { addToCart } = useCart();
+
+  const handleAddToCart = () => {
+    const wine: Wine = {
+      id,
+      name,
+      type,
+      price,
+      imageSrc,
+      description,
+      fullDescription,
+      alcohol,
+      vintage,
+      grapes,
+      tastingNotes,
+      foodPairing,
+    };
+    addToCart(wine);
+  };
 
   return (
     <div className="glass rounded-lg overflow-hidden hover-lift group">
@@ -60,7 +96,10 @@ const WineCard = ({
                 {t('wines.details')}
               </Button>
             </Link>
-            <Button size="sm" className="bg-primary hover:bg-primary/90">
+            <Button
+              size="sm"
+              className="bg-primary hover:bg-primary/90"
+              onClick={handleAddToCart}>
               <ShoppingCart className="h-4 w-4 mr-1" />
               {t('wines.add')}
             </Button>

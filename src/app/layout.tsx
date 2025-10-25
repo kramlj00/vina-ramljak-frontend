@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 
+import { config } from '@/config';
+import { CartProvider } from '@/context';
+
 import CookieBanner from '@/components/cookie-banner';
 import Footer from '@/components/footer';
 import Navigation from '@/components/navigation';
@@ -19,25 +22,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Vina Ramljak',
-  description: 'Vina Ramljak',
+  title: config.metadata.name,
+  description: config.metadata.description,
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout(
+  { children }: { children: React.ReactNode },
+) {
   return (
     <html lang="hr" className="overscroll-none">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
-      >
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}>
         <I18nProvider>
-          <CookieBanner />
-          <Navigation />
-          {children}
-          <Footer />
+          <CartProvider>
+            <CookieBanner />
+            <Navigation />
+            {children}
+            <Footer />
+          </CartProvider>
         </I18nProvider>
       </body>
     </html>

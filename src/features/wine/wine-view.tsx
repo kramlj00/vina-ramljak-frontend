@@ -5,6 +5,7 @@ import { useParams } from 'next/navigation';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { useCart } from '@/context';
 import { ArrowLeft, ShoppingCart, WineIcon } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
@@ -14,8 +15,15 @@ import { getWine } from '../home/utils';
 const WineView = () => {
   const { t } = useTranslation();
   const { id } = useParams<{ id: string }>();
+  const { addToCart } = useCart();
 
   const wine = useMemo(() => getWine(t, id ?? ''), [t, id]);
+
+  const handleAddToCart = () => {
+    if (wine) {
+      addToCart(wine);
+    }
+  };
 
   if (!wine) {
     return (
@@ -103,8 +111,7 @@ const WineView = () => {
                 {wine.tastingNotes.map((note, index) => (
                   <li
                     key={index}
-                    className="flex items-center space-x-2 text-muted-foreground"
-                  >
+                    className="flex items-center space-x-2 text-muted-foreground">
                     <WineIcon className="h-4 w-4 text-accent" />
                     <span>{note}</span>
                   </li>
@@ -120,8 +127,7 @@ const WineView = () => {
                 {wine.foodPairing.map((food, index) => (
                   <li
                     key={index}
-                    className="flex items-center space-x-2 text-muted-foreground"
-                  >
+                    className="flex items-center space-x-2 text-muted-foreground">
                     <span className="text-accent">•</span>
                     <span>{food}</span>
                   </li>
@@ -129,7 +135,10 @@ const WineView = () => {
               </ul>
             </div>
 
-            <Button size="lg" className="w-full bg-primary hover:bg-primary/90">
+            <Button
+              size="lg"
+              className="w-full bg-primary hover:bg-primary/90"
+              onClick={handleAddToCart}>
               <ShoppingCart className="mr-2 h-5 w-5" />
               {t('common.addToCart')}
             </Button>
