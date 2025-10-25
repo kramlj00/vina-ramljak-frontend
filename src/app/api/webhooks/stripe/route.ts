@@ -23,10 +23,11 @@ export async function POST(req: NextRequest) {
   try {
     // Verify webhook signature
     event = stripe.webhooks.constructEvent(body, signature, webhookSecret);
-  } catch (err: any) {
-    console.error(`Webhook signature verification failed: ${err.message}`);
+  } catch (err) {
+    const errorMessage = err instanceof Error ? err.message : 'Unknown error';
+    console.error(`Webhook signature verification failed: ${errorMessage}`);
     return NextResponse.json(
-      { error: `Webhook Error: ${err.message}` },
+      { error: `Webhook Error: ${errorMessage}` },
       { status: 400 }
     );
   }
@@ -55,8 +56,8 @@ export async function POST(req: NextRequest) {
     }
 
     return NextResponse.json({ received: true });
-  } catch (error: any) {
-    console.error(`Error processing webhook: ${error.message}`);
+  } catch (error) {
+    console.error(`Error processing webhook: ${error instanceof Error ? error.message : 'Unknown error'}`);
     return NextResponse.json(
       { error: "Webhook processing failed" },
       { status: 500 }
