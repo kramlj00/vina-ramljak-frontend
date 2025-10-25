@@ -18,12 +18,12 @@ const HomeCta = () => {
             {t("homeCta.description")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
+            <Link href={`#${t("navigation.contactAnchor")}`}>
               <Button size="lg" className="bg-primary hover:bg-primary/90">
                 {t("homeCta.contact")}
               </Button>
             </Link>
-            <Link href="/wines">
+            <Link href={`#${t("navigation.winesAnchor")}`}>
               <Button size="lg" variant="outline" className="border-border/50">
                 {t("homeCta.shop")}
               </Button>

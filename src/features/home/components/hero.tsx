@@ -28,7 +28,7 @@ const Hero = () => {
             {t("hero.title")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/wines">
+            <Link href={`#${t("navigation.winesAnchor")}`}>
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-lg"
@@ -37,7 +37,7 @@ const Hero = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
-            <Link href="/about">
+            <Link href={`#${t("navigation.aboutAnchor")}`}>
               <Button
                 size="lg"
                 variant="outline"

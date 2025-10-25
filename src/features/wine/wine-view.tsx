@@ -28,7 +28,7 @@ const WineView = () => {
   return (
     <div className="pt-32 pb-20">
       <div className="container mx-auto px-4">
-        <Link href="/">
+        <Link href={`/#${t("navigation.winesAnchor")}`}>
           <Button variant="ghost" className="mb-8">
             <ArrowLeft className="mr-2 h-4 w-4" />
             {t("common.backToHome")}

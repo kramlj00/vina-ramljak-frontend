@@ -29,7 +29,7 @@ const BlogPostView = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {/* Back Button */}
-          <Link href="/">
+          <Link href={`/#${t("navigation.blogAnchor")}`}>
             <Button variant="ghost" className="mb-8 -ml-4">
               <ArrowLeft className="mr-2 h-4 w-4" />
               {t("common.backToHome")}
@@ -82,7 +82,7 @@ const BlogPostView = () => {
           {/* Footer */}
           <div className="mt-12 pt-8 border-t border-border">
             <div className="flex justify-between items-center">
-              <Link href="/">
+              <Link href={`/#${t("navigation.blogAnchor")}`}>
                 <Button variant="outline" className="border-border/50">
                   <ArrowLeft className="mr-2 h-4 w-4" />
                   {t("common.backToHome")}

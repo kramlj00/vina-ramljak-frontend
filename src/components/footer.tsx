@@ -31,7 +31,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="/wines"
+                  href={`/#${t("navigation.winesAnchor")}`}
                   className="text-sm text-muted-foreground hover:text-accent transition-colors"
                 >
                   {t("footer.quickLinks.wines")}
@@ -39,7 +39,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/about"
+                  href={`/#${t("navigation.aboutAnchor")}`}
                   className="text-sm text-muted-foreground hover:text-accent transition-colors"
                 >
                   {t("footer.quickLinks.about")}
@@ -47,7 +47,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/blog"
+                  href={`/#${t("navigation.blogAnchor")}`}
                   className="text-sm text-muted-foreground hover:text-accent transition-colors"
                 >
                   {t("footer.quickLinks.blog")}
@@ -55,7 +55,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/contact"
+                  href={`/#${t("navigation.contactAnchor")}`}
                   className="text-sm text-muted-foreground hover:text-accent transition-colors"
                 >
                   {t("footer.quickLinks.contact")}
