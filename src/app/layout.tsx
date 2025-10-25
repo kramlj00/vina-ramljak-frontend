@@ -1,37 +1,38 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import Navigation from "@/components/navigation";
-import { I18nProvider } from "@/components/providers";
-import Footer from "@/components/footer";
-import CookieBanner from "@/components/cookie-banner";
-import { CartProvider } from "@/context/cart-context";
+import type { Metadata } from 'next';
+import { Geist, Geist_Mono } from 'next/font/google';
+
+import { config } from '@/config';
+import { CartProvider } from '@/context';
+
+import CookieBanner from '@/components/cookie-banner';
+import Footer from '@/components/footer';
+import Navigation from '@/components/navigation';
+import { I18nProvider } from '@/components/providers';
+
+import './globals.css';
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
-  title: "Vina Ramljak",
-  description: "Vina Ramljak",
+  title: config.metadata.name,
+  description: config.metadata.description,
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout(
+  { children }: { children: React.ReactNode },
+) {
   return (
     <html lang="hr" className="overscroll-none">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
-      >
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}>
         <I18nProvider>
           <CartProvider>
             <CookieBanner />

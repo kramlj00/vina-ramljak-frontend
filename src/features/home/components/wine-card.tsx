@@ -1,9 +1,12 @@
-import { ShoppingCart } from "lucide-react";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { useTranslation } from "react-i18next";
-import { useCart } from "@/context/cart-context";
-import { Wine } from "@/features/home/utils";
+import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
+
+import { useCart } from '@/context';
+import { ShoppingCart } from 'lucide-react';
+
+import { Button } from '@/components/ui/button';
+
+import { Wine } from '../utils';
 
 interface WineCardProps {
   id: string;
@@ -20,20 +23,22 @@ interface WineCardProps {
   foodPairing?: string[];
 }
 
-const WineCard = ({
-  id,
-  name,
-  type,
-  price,
-  imageSrc,
-  description,
-  fullDescription = "",
-  alcohol = "",
-  vintage = "",
-  grapes = [],
-  tastingNotes = [],
-  foodPairing = [],
-}: WineCardProps) => {
+const WineCard = (
+  {
+    id,
+    name,
+    type,
+    price,
+    imageSrc,
+    description,
+    fullDescription = '',
+    alcohol = '',
+    vintage = '',
+    grapes = [],
+    tastingNotes = [],
+    foodPairing = [],
+  }: WineCardProps,
+) => {
   const { t } = useTranslation();
   const { addToCart } = useCart();
 
@@ -88,16 +93,15 @@ const WineCard = ({
           <div className="flex space-x-2">
             <Link href={`/wine/${id}`}>
               <Button variant="outline" size="sm" className="border-border/50">
-                {t("wines.details")}
+                {t('wines.details')}
               </Button>
             </Link>
             <Button
               size="sm"
               className="bg-primary hover:bg-primary/90"
-              onClick={handleAddToCart}
-            >
+              onClick={handleAddToCart}>
               <ShoppingCart className="h-4 w-4 mr-1" />
-              {t("wines.add")}
+              {t('wines.add')}
             </Button>
           </div>
         </div>

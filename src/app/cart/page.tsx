@@ -1,4 +1,4 @@
-import CartView from "@/features/cart";
+import CartView from '@/features/cart';
 
 const CartPage = () => {
   return <CartView />;

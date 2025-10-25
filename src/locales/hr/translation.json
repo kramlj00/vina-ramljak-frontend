@@ -1,178 +1,183 @@
 {
-    "navigation": {
-        "home": "Početna",
-        "wines": "Vina",
-        "winesAnchor": "vina",
-        "gallery": "Galerija",
-        "galleryAnchor": "galerija",
-        "blog": "Blog",
-        "blogAnchor": "blog",
-        "about": "O Nama",
-        "aboutAnchor": "o-nama",
-        "contact": "Kontakt",
-        "contactAnchor": "kontakt"
+  "navigation": {
+    "home": "Početna",
+    "wines": "Vina",
+    "winesAnchor": "vina",
+    "gallery": "Galerija",
+    "galleryAnchor": "galerija",
+    "blog": "Blog",
+    "blogAnchor": "blog",
+    "about": "O Nama",
+    "aboutAnchor": "o-nama",
+    "contact": "Kontakt",
+    "contactAnchor": "kontakt"
+  },
+  "hero": {
+    "title": "Premium hrvatska vina kreirana sa strasti i tradicijom",
+    "buttonExplore": "Istraži naša vina",
+    "buttonOurStory": "Naša priča"
+  },
+  "grapes": {
+    "plavina": "Plavina",
+    "lasin": "Lasin",
+    "merlot": "Merlot"
+  },
+  "about": {
+    "title": "O Nama",
+    "description": "Priča o strasti, tradiciji i izvrsnosti",
+    "ourStory": "Naša Priča",
+    "story1": "Vinum Bibens osnovan je s jednostavnom, ali dubokom vizijom: stvarati vina koja obuhvaćaju bit hrvatske vinske baštine uz istovremeno prihvaćanje inovacija i težnju za izvrsnosti.",
+    "story2": "Smješteni u srcu hrvatskog vinogorja, naši vinogradi uživaju blagodati stoljetne tradicije vinarstva i jedinstvene mikroklime koja našim vinima daje poseban karakter.",
+    "quality": "Kvaliteta",
+    "qualityDescription": "Nikada ne kompromitiramo kvalitetu - od odabira grožđa do punjenja u boce",
+    "tradition": "Tradicija",
+    "traditionDescription": "Njegujemo stoljetne tehnike vinarstva i autohtone sorte grožđa",
+    "innovation": "Inovacija",
+    "innovationDescription": "Primjenjujemo suvremene tehnike vinarstva kako bismo stvorili izuzetna vina",
+    "terroir": "Vinogorje",
+    "terroirDescription": "Poštujemo i ističemo jedinstveni karakter našeg vinogorja"
+  },
+  "gallery": {
+    "title": "Galerija",
+    "description": "Vizualni put kroz naš vinograd i vina",
+    "ourVineyard": "Naš Vinograd"
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Priče i savjeti iz Vinum Bibens",
+    "post1": {
+      "title": "Umjetnost hrvatskog vinarstva",
+      "excerpt": "Otkrijte stoljetne tradicije i moderne tehnike koje čine hrvatska vina jedinstvenim...",
+      "content": "Hrvatsko vinarstvo je prekrasan spoj drevnih tradicija i moderne inovacije. Stoljećima su naši preci uzgajali grožđe na ovoj blagoslovljenoj zemlji, razvijajući tehnike koje su prenosili s koljena na koljeno.\nJedinstveni teritorij Hrvatske, s mediteranskom klimom i raznolikim sastavom tla, stvara idealne uvjete za proizvodnju iznimnih vina.\nOd obalnih područja do unutrašnjih dolina, svako područje daje svoj vlastiti karakter našim vinima. U Vinum Bibens poštujemo te tradicije dok prihvaćamo moderne tehnike vinarstva. Naš proces odležavanja u hrastovim bačvama, fermentacija s kontroliranom temperaturom i pažljiv odabir grožđa osiguravaju da svaka boca predstavlja najbolje od oba svijeta.\nRadimo s autohtonim hrvatskim sortama grožđa poput Plavine i Lasine, koje su jedinstveno prilagođene našoj klimi i tlu. Ovo grožđe proizvodi vina s posebnim karakterom koje nećete naći nigdje drugdje na svijetu.\nUmjetnost vinarstva nije samo tehnika – to je strast, predanost i poštovanje prema zemlji. Svaka sezona berbe donosi nove izazove i prilike za stvaranje nečeg doista posebnog.",
+      "category": "Vinarstvo"
     },
-    "hero": {
-        "title": "Premium hrvatska vina kreirana sa strasti i tradicijom",
-        "buttonExplore": "Istraži naša vina",
-        "buttonOurStory": "Naša priča"
+    "readMore": "Saznaj više",
+    "notFound": "Post nije pronađen"
+  },
+  "contact": {
+    "title": "Kontaktirajte nas",
+    "description": "Posjetite nas ili nas kontaktirajte",
+    "getInTouch": "Kontaktirajte nas",
+    "address": "Adresa",
+    "phone": "Telefon",
+    "region": "Dalmacija",
+    "croatia": "Hrvatska"
+  },
+  "homeCta": {
+    "title": "Spremni za iskustvo naših vina?",
+    "description": "Posjetite naše vinarstvo ili naručite online i otkrijte izuzetan okus Vinum Bibens",
+    "contact": "Kontaktirajte nas",
+    "shop": "Kupite sada"
+  },
+  "footer": {
+    "title": "Premium hrvatska vina kreirana sa strasti i tradicijom.",
+    "quickLinks": {
+      "title": "Brze poveznice",
+      "wines": "Naša vina",
+      "about": "O Nama",
+      "blog": "Blog",
+      "contact": "Kontaktirajte nas",
+      "contactInfo": {
+        "title": "Kontakt informacije",
+        "country": "Hrvatska"
+      },
+      "social": {
+        "title": "Zapratite nas"
+      }
     },
-    "grapes": {
-        "plavina": "Plavina",
-        "lasin": "Lasin",
-        "merlot": "Merlot"
+    "copyright": {
+      "allRightsReserved": "Sva prava zadržana."
     },
-    "about": {
-        "title": "O Nama",
-        "description": "Priča o strasti, tradiciji i izvrsnosti",
-        "ourStory": "Naša Priča",
-        "story1": "Vinum Bibens osnovan je s jednostavnom, ali dubokom vizijom: stvarati vina koja obuhvaćaju bit hrvatske vinske baštine uz istovremeno prihvaćanje inovacija i težnju za izvrsnosti.",
-        "story2": "Smješteni u srcu hrvatskog vinogorja, naši vinogradi uživaju blagodati stoljetne tradicije vinarstva i jedinstvene mikroklime koja našim vinima daje poseban karakter.",
-        "quality": "Kvaliteta",
-        "qualityDescription": "Nikada ne kompromitiramo kvalitetu - od odabira grožđa do punjenja u boce",
-        "tradition": "Tradicija",
-        "traditionDescription": "Njegujemo stoljetne tehnike vinarstva i autohtone sorte grožđa",
-        "innovation": "Inovacija",
-        "innovationDescription": "Primjenjujemo suvremene tehnike vinarstva kako bismo stvorili izuzetna vina",
-        "terroir": "Vinogorje",
-        "terroirDescription": "Poštujemo i ističemo jedinstveni karakter našeg vinogorja"
+    "privacyPolicy": "Politika privatnosti",
+    "backToTop": "Povratak na vrh"
+  },
+  "privacy": {
+    "title": "Politika privatnosti"
+  },
+  "wine": {
+    "notFound": "Vino nije pronađeno",
+    "vintage": "Godina berbe",
+    "alcohol": "Alkohol",
+    "grapes": "Sorte grožđa",
+    "tastingNotes": "Okusne note",
+    "foodPairing": "Uparivanje s hranom",
+    "perBottle": "po boci"
+  },
+  "wines": {
+    "title": "Naša kolekcija",
+    "description": "Otkrij našu pažljivo kreiranu selekciju premium hrvatskih vina",
+    "details": "Detalji",
+    "add": "Dodaj",
+    "rose": {
+      "name": "Vinum Bibens Rosé",
+      "type": "Rosé Vino",
+      "description": "Otkrij našu pažljivo kreiranu selekciju premium hrvatskih vina",
+      "fullDescription": "Otkrij našu pažljivo kreiranu selekciju premium hrvatskih vina",
+      "tastingNotes": "Svježe jagode i lubenica, Nježne cvjetne note, Osvježavajući citrusni završetak, Mineralni podtonovi",
+      "foodPairing": "Morski plodovi s roštilja, Mediteranske salate, Lagana tjestenina, Meki sirevi"
     },
-    "gallery": {
-        "title": "Galerija",
-        "description": "Vizualni put kroz naš vinograd i vina",
-        "ourVineyard": "Naš Vinograd"
+    "crno": {
+      "name": "Vinum Bibens Crno",
+      "type": "Crveni Blend",
+      "description": "Naš zaštitni znak kombinacije sorti Plavina, Lasina i Merlot koje stvaraju jedinstven hrvatski karakter.",
+      "fullDescription": "Crno predstavlja vrhunac našeg vinskog umijeća. Ovaj prepoznatljivi blend kombinira autohtone hrvatske sorte Plavinu i Lasinu s međunarodnim Merlotom, stvarajući vino koje poštuje tradiciju dok prihvaća modernost. Odležano u hrastovim bačvama, razvija složene slojeve okusa koji se otvaraju sa svakim gutljajem.",
+      "tastingNotes": "Tamna trešnja i kupina, Naznake mediteranskog bilja, Glatki tanini, Završetak hrasta i vanilije",
+      "foodPairing": "Crveno meso s roštilja, Zreli sirevi, Obilni gulaši, Tamna čokolada"
     },
-    "blog": {
-        "title": "Blog",
-        "description": "Priče i savjeti iz Vinum Bibens",
-        "post1": {
-            "title": "Umjetnost hrvatskog vinarstva",
-            "excerpt": "Otkrijte stoljetne tradicije i moderne tehnike koje čine hrvatska vina jedinstvenim...",
-            "content": "Hrvatsko vinarstvo je prekrasan spoj drevnih tradicija i moderne inovacije. Stoljećima su naši preci uzgajali grožđe na ovoj blagoslovljenoj zemlji, razvijajući tehnike koje su prenosili s koljena na koljeno.\nJedinstveni teritorij Hrvatske, s mediteranskom klimom i raznolikim sastavom tla, stvara idealne uvjete za proizvodnju iznimnih vina.\nOd obalnih područja do unutrašnjih dolina, svako područje daje svoj vlastiti karakter našim vinima. U Vinum Bibens poštujemo te tradicije dok prihvaćamo moderne tehnike vinarstva. Naš proces odležavanja u hrastovim bačvama, fermentacija s kontroliranom temperaturom i pažljiv odabir grožđa osiguravaju da svaka boca predstavlja najbolje od oba svijeta.\nRadimo s autohtonim hrvatskim sortama grožđa poput Plavine i Lasine, koje su jedinstveno prilagođene našoj klimi i tlu. Ovo grožđe proizvodi vina s posebnim karakterom koje nećete naći nigdje drugdje na svijetu.\nUmjetnost vinarstva nije samo tehnika – to je strast, predanost i poštovanje prema zemlji. Svaka sezona berbe donosi nove izazove i prilike za stvaranje nečeg doista posebnog.",
-            "category": "Vinarstvo"
-        },
-        "readMore": "Saznaj više",
-        "notFound": "Post nije pronađen"
-    },
-    "contact": {
-        "title": "Kontaktirajte nas",
-        "description": "Posjetite nas ili nas kontaktirajte",
-        "getInTouch": "Kontaktirajte nas",
-        "address": "Adresa",
-        "phone": "Telefon",
-        "region": "Dalmacija",
-        "croatia": "Hrvatska"
-    },
-    "homeCta": {
-        "title": "Spremni za iskustvo naših vina?",
-        "description": "Posjetite naše vinarstvo ili naručite online i otkrijte izuzetan okus Vinum Bibens",
-        "contact": "Kontaktirajte nas",
-        "shop": "Kupite sada"
-    },
-    "footer": {
-        "title": "Premium hrvatska vina kreirana sa strasti i tradicijom.",
-        "quickLinks": {
-            "title": "Brze poveznice",
-            "wines": "Naša vina",
-            "about": "O Nama",
-            "blog": "Blog",
-            "contact": "Kontaktirajte nas",
-            "contactInfo": {
-                "title": "Kontakt informacije",
-                "country": "Hrvatska"
-            },
-            "social": {
-                "title": "Zapratite nas"
-            }
-        },
-        "copyright": {
-            "allRightsReserved": "Sva prava zadržana."
-        }
-    },
-    "wine": {
-        "notFound": "Vino nije pronađeno",
-        "vintage": "Godina berbe",
-        "alcohol": "Alkohol",
-        "grapes": "Sorte grožđa",
-        "tastingNotes": "Okusne note",
-        "foodPairing": "Uparivanje s hranom",
-        "perBottle": "po boci"
-    },
-    "wines": {
-        "title": "Naša kolekcija",
-        "description": "Otkrij našu pažljivo kreiranu selekciju premium hrvatskih vina",
-        "details": "Detalji",
-        "add": "Dodaj",
-        "rose": {
-            "name": "Vinum Bibens Rosé",
-            "type": "Rosé Vino",
-            "description": "Otkrij našu pažljivo kreiranu selekciju premium hrvatskih vina",
-            "fullDescription": "Otkrij našu pažljivo kreiranu selekciju premium hrvatskih vina",
-            "tastingNotes": "Svježe jagode i lubenica, Nježne cvjetne note, Osvježavajući citrusni završetak, Mineralni podtonovi",
-            "foodPairing": "Morski plodovi s roštilja, Mediteranske salate, Lagana tjestenina, Meki sirevi"
-        },
-        "crno": {
-            "name": "Vinum Bibens Crno",
-            "type": "Crveni Blend",
-            "description": "Naš zaštitni znak kombinacije sorti Plavina, Lasina i Merlot koje stvaraju jedinstven hrvatski karakter.",
-            "fullDescription": "Crno predstavlja vrhunac našeg vinskog umijeća. Ovaj prepoznatljivi blend kombinira autohtone hrvatske sorte Plavinu i Lasinu s međunarodnim Merlotom, stvarajući vino koje poštuje tradiciju dok prihvaća modernost. Odležano u hrastovim bačvama, razvija složene slojeve okusa koji se otvaraju sa svakim gutljajem.",
-            "tastingNotes": "Tamna trešnja i kupina, Naznake mediteranskog bilja, Glatki tanini, Završetak hrasta i vanilije",
-            "foodPairing": "Crveno meso s roštilja, Zreli sirevi, Obilni gulaši, Tamna čokolada"
-        },
-        "merlot": {
-            "name": "Vinum Bibens Merlot",
-            "type": "Merlot",
-            "description": "Bogat i baršunast Merlot sa složenim voćnim okusima i elegantnom strukturom.",
-            "fullDescription": "Naš Merlot prikazuje potencijal ove plemenite sorte u jedinstvenom hrvatskom terroiru. Uzgojeno u pažljivo odabranim vinogradima, ovo grožđe ima koristi od idealne izloženosti suncu i hladnih noći. Rezultat je vino izvanredne dubine i elegancije, koje kombinira snagu s profinjenim karakterom u savršenoj harmoniji.",
-            "tastingNotes": "Zrela šljiva i crna trešnja, Suptilne note začina, Svilenkasto glatka tekstura, Dugi, profinjen završetak",
-            "foodPairing": "Pečena janjetina, Gljive rižoto, Tvrdi sirevi, Goveđi carpaccio"
-        }
-    },
-    "cookieBanner": {
-        "title": "Oglašavanje kolačića",
-        "description": "Koristimo kolačiće kako bismo poboljšali vaše iskustvo na našoj web stranici i analizirali našu promet. Klikom na \"Prihvaćam\", slažete se s našim korištenjem kolačića.",
-        "accept": "Prihvaćam",
-        "decline": "Odbijam"
-    },
-    "cart": {
-        "title": "Vaša košarica",
-        "empty": {
-            "title": "Vaša košarica je prazna",
-            "description": "Dodajte neka vina u vašu košaricu kako biste započeli",
-            "button": "Pregledaj vina"
-        },
-        "clearCart": "Isprazni košaricu",
-        "checkout": "Naruči",
-        "secureCheckout": "Sigurna naplata putem Stripe",
-        "summary": {
-            "title": "Sažetak narudžbe",
-            "subtotal": "Međuzbroj",
-            "shipping": "Dostava",
-            "total": "Ukupno",
-            "free": "Besplatno"
-        }
-    },
-    "checkout": {
-        "processing": "Obrađujem...",
-        "error": "Greška pri obradi plaćanja. Molimo pokušajte ponovno.",
-        "success": {
-            "title": "Uspješna kupnja!",
-            "description": "Hvala vam na narudžbi. Vaša narudžba je uspješno primljena.",
-            "orderNumber": "Broj narudžbe:",
-            "emailConfirmation": "Poslali smo vam potvrdu na email.",
-            "backToHome": "Povratak na početnu"
-        },
-        "cancel": {
-            "title": "Narudžba otkazana",
-            "description": "Vaša narudžba je otkazana. Košarica je sačuvana i možete nastaviti s kupnjom.",
-            "backToCart": "Povratak u košaricu",
-            "backToHome": "Povratak na početnu"
-        }
-    },
-    "common": {
-        "toggleLanguage": "Promijeni jezik",
-        "backToHome": "Povratak na početnu stranicu",
-        "addToCart": "Dodaj u košaricu",
-        "continueShopping": "Nastavi kupovati"
+    "merlot": {
+      "name": "Vinum Bibens Merlot",
+      "type": "Merlot",
+      "description": "Bogat i baršunast Merlot sa složenim voćnim okusima i elegantnom strukturom.",
+      "fullDescription": "Naš Merlot prikazuje potencijal ove plemenite sorte u jedinstvenom hrvatskom terroiru. Uzgojeno u pažljivo odabranim vinogradima, ovo grožđe ima koristi od idealne izloženosti suncu i hladnih noći. Rezultat je vino izvanredne dubine i elegancije, koje kombinira snagu s profinjenim karakterom u savršenoj harmoniji.",
+      "tastingNotes": "Zrela šljiva i crna trešnja, Suptilne note začina, Svilenkasto glatka tekstura, Dugi, profinjen završetak",
+      "foodPairing": "Pečena janjetina, Gljive rižoto, Tvrdi sirevi, Goveđi carpaccio"
     }
+  },
+  "cookieBanner": {
+    "title": "Oglašavanje kolačića",
+    "description": "Koristimo kolačiće kako bismo poboljšali vaše iskustvo na našoj web stranici i analizirali našu promet. Klikom na \"Prihvaćam\", slažete se s našim korištenjem kolačića.",
+    "accept": "Prihvaćam",
+    "decline": "Odbijam"
+  },
+  "cart": {
+    "title": "Vaša košarica",
+    "empty": {
+      "title": "Vaša košarica je prazna",
+      "description": "Dodajte neka vina u vašu košaricu kako biste započeli",
+      "button": "Pregledaj vina"
+    },
+    "clearCart": "Isprazni košaricu",
+    "checkout": "Naruči",
+    "secureCheckout": "Sigurna naplata putem Stripe",
+    "summary": {
+      "title": "Sažetak narudžbe",
+      "subtotal": "Međuzbroj",
+      "shipping": "Dostava",
+      "total": "Ukupno",
+      "free": "Besplatno"
+    }
+  },
+  "checkout": {
+    "processing": "Obrađujem...",
+    "error": "Greška pri obradi plaćanja. Molimo pokušajte ponovno.",
+    "success": {
+      "title": "Uspješna kupnja!",
+      "description": "Hvala vam na narudžbi. Vaša narudžba je uspješno primljena.",
+      "orderNumber": "Broj narudžbe:",
+      "emailConfirmation": "Poslali smo vam potvrdu na email.",
+      "backToHome": "Povratak na početnu"
+    },
+    "cancel": {
+      "title": "Narudžba otkazana",
+      "description": "Vaša narudžba je otkazana. Košarica je sačuvana i možete nastaviti s kupnjom.",
+      "backToCart": "Povratak u košaricu",
+      "backToHome": "Povratak na početnu"
+    }
+  },
+  "common": {
+    "toggleLanguage": "Promijeni jezik",
+    "backToHome": "Povratak na početnu stranicu",
+    "addToCart": "Dodaj u košaricu",
+    "continueShopping": "Nastavi kupovati"
+  }
 }

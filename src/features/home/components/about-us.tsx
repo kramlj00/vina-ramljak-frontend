@@ -1,9 +1,12 @@
-"use client";
+'use client';
 
-import { Wine } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { getAboutUsDetails } from "../utils";
-import SectionTitle from "@/components/section-title";
+import { useTranslation } from 'react-i18next';
+
+import { Wine } from 'lucide-react';
+
+import SectionTitle from '@/components/section-title';
+
+import { getAboutUsDetails } from '../utils';
 
 const AboutUs = () => {
   const { t } = useTranslation();
@@ -11,23 +14,23 @@ const AboutUs = () => {
   const aboutUsDetails = getAboutUsDetails(t);
 
   return (
-    <section id={t("navigation.aboutAnchor")} className="py-20">
+    <section id={t('navigation.aboutAnchor')} className="py-20">
       <div className="container mx-auto px-4">
         <SectionTitle
-          title={t("about.title")}
-          description={t("about.description")}
+          title={t('about.title')}
+          description={t('about.description')}
         />
 
         <div className="grid md:grid-cols-2 gap-12 mb-16 items-center">
           <div className="space-y-6">
             <h3 className="font-playfair text-3xl font-bold text-gradient-wine">
-              {t("about.ourStory")}
+              {t('about.ourStory')}
             </h3>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              {t("about.story1")}
+              {t('about.story1')}
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              {t("about.story2")}
+              {t('about.story2')}
             </p>
           </div>
           <div className="relative aspect-video rounded-lg overflow-hidden">

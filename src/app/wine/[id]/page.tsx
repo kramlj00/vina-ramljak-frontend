@@ -1,4 +1,4 @@
-import WineView from "@/features/wine";
+import WineView from '@/features/wine';
 
 const WinePage = () => {
   return <WineView />;

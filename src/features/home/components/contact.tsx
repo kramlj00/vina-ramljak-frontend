@@ -1,20 +1,21 @@
-"use client";
+'use client';
 
-import { Mail, MapPin, Phone } from "lucide-react";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
+
+import { Mail, MapPin, Phone } from 'lucide-react';
 
 const Contact = () => {
   const { t } = useTranslation();
 
   return (
-    <section id={t("navigation.contactAnchor")} className="py-20 bg-muted/20">
+    <section id={t('navigation.contactAnchor')} className="py-20 bg-muted/20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-4 text-gradient-wine">
-            {t("contact.title")}
+            {t('contact.title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            {t("contact.description")}
+            {t('contact.description')}
           </p>
         </div>
 
@@ -23,28 +24,28 @@ const Contact = () => {
             {/* Contact Info */}
             <div className="glass rounded-lg p-8">
               <h3 className="font-playfair text-2xl font-bold mb-6 text-gradient-wine">
-                {t("contact.getInTouch")}
+                {t('contact.getInTouch')}
               </h3>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <MapPin className="h-6 w-6 text-accent mt-1 flex-shrink-0" />
                   <div>
                     <h4 className="font-semibold mb-1">
-                      {t("contact.address")}
+                      {t('contact.address')}
                     </h4>
                     <p className="text-muted-foreground">
                       Vinum Bibens
                       <br />
-                      {t("contact.region")}
+                      {t('contact.region')}
                       <br />
-                      {t("contact.croatia")}
+                      {t('contact.croatia')}
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <Phone className="h-6 w-6 text-accent mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold mb-1">{t("contact.phone")}</h4>
+                    <h4 className="font-semibold mb-1">{t('contact.phone')}</h4>
                     <p className="text-muted-foreground">
                       +385 (0) XX XXX XXXX
                     </p>

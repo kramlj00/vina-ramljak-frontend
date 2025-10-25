@@ -1,4 +1,4 @@
-import CartView from "./cart-view";
+import CartView from './cart-view';
 
 export default CartView;
 export { default as CartItem } from "./components/cart-item";

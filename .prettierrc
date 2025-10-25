@@ -1,0 +1,18 @@
+{
+  "printWidth": 80,
+  "trailingComma": "all",
+  "singleQuote": true,
+  "jsxBracketSameLine": true,
+  "tabWidth": 2,
+  "tailwindFunctions": ["twMerge"],
+  "importOrder": [
+    "^react|^next",
+    "<THIRD_PARTY_MODULES>",
+    "^@/hooks",
+    "^@/lib",
+    "^@/components",
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
+  "plugins": ["@trivago/prettier-plugin-sort-imports"]
+}

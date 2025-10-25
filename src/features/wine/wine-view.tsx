@@ -1,20 +1,23 @@
-"use client";
+'use client';
 
-import { useParams } from "next/navigation";
-import { getWine } from "../home/utils";
-import { useTranslation } from "react-i18next";
-import { useMemo } from "react";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { ArrowLeft, ShoppingCart, WineIcon } from "lucide-react";
-import { useCart } from "@/context/cart-context";
+import Link from 'next/link';
+import { useParams } from 'next/navigation';
+import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
+
+import { useCart } from '@/context';
+import { ArrowLeft, ShoppingCart, WineIcon } from 'lucide-react';
+
+import { Button } from '@/components/ui/button';
+
+import { getWine } from '../home/utils';
 
 const WineView = () => {
   const { t } = useTranslation();
   const { id } = useParams<{ id: string }>();
   const { addToCart } = useCart();
 
-  const wine = useMemo(() => getWine(t, id ?? ""), [t, id]);
+  const wine = useMemo(() => getWine(t, id ?? ''), [t, id]);
 
   const handleAddToCart = () => {
     if (wine) {
@@ -25,9 +28,9 @@ const WineView = () => {
   if (!wine) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center gap-8">
-        <p className="text-center text-2xl font-bold">{t("wine.notFound")}</p>
+        <p className="text-center text-2xl font-bold">{t('wine.notFound')}</p>
         <Link href="/">
-          <Button>{t("common.backToHome")}</Button>
+          <Button>{t('common.backToHome')}</Button>
         </Link>
       </div>
     );
@@ -36,10 +39,10 @@ const WineView = () => {
   return (
     <div className="pt-32 pb-20">
       <div className="container mx-auto px-4">
-        <Link href="/">
+        <Link href={`/#${t('navigation.winesAnchor')}`}>
           <Button variant="ghost" className="mb-8">
             <ArrowLeft className="mr-2 h-4 w-4" />
-            {t("common.backToHome")}
+            {t('common.backToHome')}
           </Button>
         </Link>
 
@@ -69,7 +72,7 @@ const WineView = () => {
                 €{wine.price}
               </span>
               <span className="text-muted-foreground">
-                {t("wine.perBottle")}
+                {t('wine.perBottle')}
               </span>
             </div>
 
@@ -81,35 +84,34 @@ const WineView = () => {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <span className="text-sm text-muted-foreground">
-                    {t("wine.vintage")}
+                    {t('wine.vintage')}
                   </span>
                   <p className="font-semibold">{wine.vintage}</p>
                 </div>
                 <div>
                   <span className="text-sm text-muted-foreground">
-                    {t("wine.alcohol")}
+                    {t('wine.alcohol')}
                   </span>
                   <p className="font-semibold">{wine.alcohol}</p>
                 </div>
               </div>
               <div>
                 <span className="text-sm text-muted-foreground">
-                  {t("wine.grapes")}
+                  {t('wine.grapes')}
                 </span>
-                <p className="font-semibold">{wine.grapes.join(", ")}</p>
+                <p className="font-semibold">{wine.grapes.join(', ')}</p>
               </div>
             </div>
 
             <div>
               <h3 className="font-playfair text-xl font-semibold mb-3">
-                {t("wine.tastingNotes")}
+                {t('wine.tastingNotes')}
               </h3>
               <ul className="space-y-2">
                 {wine.tastingNotes.map((note, index) => (
                   <li
                     key={index}
-                    className="flex items-center space-x-2 text-muted-foreground"
-                  >
+                    className="flex items-center space-x-2 text-muted-foreground">
                     <WineIcon className="h-4 w-4 text-accent" />
                     <span>{note}</span>
                   </li>
@@ -119,14 +121,13 @@ const WineView = () => {
 
             <div>
               <h3 className="font-playfair text-xl font-semibold mb-3">
-                {t("wine.foodPairing")}
+                {t('wine.foodPairing')}
               </h3>
               <ul className="space-y-2">
                 {wine.foodPairing.map((food, index) => (
                   <li
                     key={index}
-                    className="flex items-center space-x-2 text-muted-foreground"
-                  >
+                    className="flex items-center space-x-2 text-muted-foreground">
                     <span className="text-accent">•</span>
                     <span>{food}</span>
                   </li>
@@ -137,10 +138,9 @@ const WineView = () => {
             <Button
               size="lg"
               className="w-full bg-primary hover:bg-primary/90"
-              onClick={handleAddToCart}
-            >
+              onClick={handleAddToCart}>
               <ShoppingCart className="mr-2 h-5 w-5" />
-              {t("common.addToCart")}
+              {t('common.addToCart')}
             </Button>
           </div>
         </div>
